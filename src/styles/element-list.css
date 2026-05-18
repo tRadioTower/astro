@@ -1,0 +1,149 @@
+.element-list {
+  min-height: 100vh;
+  background: #f6f7f8;
+  color: #1f2328;
+}
+
+.element-list__header {
+  padding: 28px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #d8dee4;
+}
+
+.element-list__title {
+  max-width: 1180px;
+  margin: 0 auto;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.element-category {
+  padding: 32px 24px;
+}
+
+.element-category + .element-category {
+  border-top: 1px solid #d8dee4;
+}
+
+.element-category__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.element-category__title {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.element-category__list {
+  display: grid;
+  gap: 24px;
+}
+
+.element-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #d8dee4;
+  border-radius: 8px;
+}
+
+.element-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  background: #f0f3f6;
+  border-bottom: 1px solid #d8dee4;
+}
+
+.element-card__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.element-card__copy {
+  flex: 0 0 auto;
+  min-width: 88px;
+  padding: 8px 14px;
+  font: inherit;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  background: #0969da;
+  border: 0;
+  border-radius: 6px;
+}
+
+.element-card__copy:focus-visible {
+  outline: 3px solid #54aeff;
+  outline-offset: 2px;
+}
+
+.element-card__preview {
+  padding: 24px 16px;
+  overflow-x: auto;
+  background: #ffffff;
+}
+
+.element-card__source {
+  border-top: 1px solid #d8dee4;
+}
+
+.element-card__source summary {
+  padding: 12px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #f6f8fa;
+}
+
+.element-card__source pre {
+  max-height: 420px;
+  margin: 0;
+  padding: 16px;
+  overflow: auto;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #f6f8fa;
+  white-space: pre-wrap;
+  background: #24292f;
+}
+
+.element-card__source code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.element-card__clipboard {
+  position: fixed;
+  left: -100vw;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 736px) {
+  .element-list__header,
+  .element-category {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .element-list__title {
+    font-size: 26px;
+  }
+
+  .element-card__header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .element-card__copy {
+    width: 100%;
+  }
+}
