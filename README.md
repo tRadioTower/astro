@@ -1,75 +1,117 @@
-# Astro Element List
+# Storybook Element List
 
-`downloaded_site/elementlist.html` を元に、Astroでカテゴリ別のエレメントリストを生成します。
+HTMLエレメントをStorybookで確認・共有するための制作環境です。
 
-## 構成
+## 必要なもの
 
-- `src/components/categories/OneColumnElements.astro`: 1カラム用エレメント
-- `src/components/categories/TwoColumnElements.astro`: 2カラム用エレメント
-- `src/components/ElementCard.astro`: エレメント本体、ソースコード、コピー機能
-- `src/elements/one-column/*.html`: 1カラム用エレメントのHTML断片
-- `src/elements/two-column/*.html`: 2カラム用エレメントのHTML断片
-- `src/data/*.js`: HTML断片を読み込むデータ定義
-- `scripts/generate-elements.mjs`: 元HTMLからデータを再生成するスクリプト
+Node.jsとnpmを事前にインストールしてください。
+
+## セットアップ
+
+```bash
+npm install
+```
+
+## ローカルで編集・確認
+
+```bash
+npm run dev
+```
+
+または:
+
+```bash
+npm run storybook
+npm start
+```
+
+表示URL:
+
+```text
+http://127.0.0.1:6006/
+```
+
+この状態で `src/elements/**/*.html` や `src/styles/element-list.css` を編集すると、Storybookの画面に自動で反映されます。新しい `.html` ファイルを追加した場合も、通常は自動で再読み込みされます。反映されない場合はブラウザをリロードしてください。
+
+Storybook上では `Element List` の中に以下の表示があります。
+
+- `すべて`
+- `1カラム用`
+- `2カラム用`
 
 ## エレメントの追加
 
-1カラム用に追加する場合は `src/elements/one-column/` に `.html` ファイルを追加します。
+1カラム用に追加する場合:
+
+```text
+src/elements/one-column/
+```
+
+2カラム用に追加する場合:
+
+```text
+src/elements/two-column/
+```
+
+例:
+
+```text
+src/elements/two-column/030-new-button.html
+```
+
+HTMLはそのまま貼り付けできます。
 
 ```html
 <div class="c-unit">
   <div class="c-unit__inner">
     <section class="c-section--h2">
-      <h2 class="e-h2--element" id="sample-element"># サンプルエレメント</h2>
+      <h2 class="e-h2--element" id="new-button"># 新しいボタン</h2>
       <div class="c-section__inner">
-        ここにHTMLをそのまま貼り付けます。
+        <a href="#DUMMY" class="e-btn"><span class="e-btn__txt">ボタン</span></a>
       </div>
     </section>
   </div>
 </div>
 ```
 
-2カラム用に追加する場合は `src/elements/two-column/` に `.html` ファイルを追加します。
+ファイル名の昇順で表示されます。順番を固定したい場合は `030-new-button.html` のように番号を付けてください。画面上のタイトルは `.e-h2--element` のテキストから自動で取得されます。
 
-ファイル名の昇順で表示されます。順番を固定したい場合は `029-sample-element.html` のように番号を付けてください。画面上のタイトルは `.e-h2--element` のテキストから自動で取得されます。
+## 共有用にビルド
 
-## 使い方
-
-このリポジトリには、npmが入っていないMacでも動かせるようにローカルNode.jsを `.tools/node` に配置しています。
+共有用ファイルを作るときだけ実行します。ローカル編集中は `npm run dev` を使ってください。
 
 ```bash
-./npmw install
-./npmw run build
+npm run build
 ```
 
-ビルド後は `dist/index.html` が出力されます。
+Storybookの静的ファイルが `storybook-static/` に出力されます。
 
-ローカルサーバーで `dist` を表示:
+ビルド済みStorybookをローカルで確認:
 
 ```bash
-./serve-dist.sh
+npm run serve
 ```
 
 表示URL:
 
 ```text
-http://127.0.0.1:4322/
+http://127.0.0.1:6007/
 ```
 
-開発サーバー:
+`6007` が埋まっている場合は、自動で次の空きポートにずれます。
+
+## 元HTMLから再生成
+
+`downloaded_site/elementlist.html` から `src/elements/.../*.html` を再生成する場合:
 
 ```bash
-./npmw run dev
+npm run generate
 ```
 
-元HTMLを更新した場合:
+手で追加したHTMLと同名のファイルがある場合は上書きされます。追加分は新しい番号のファイル名にしてください。
 
-```bash
-./npmw run generate
-```
+## CSSと画像
 
-このコマンドは `downloaded_site/elementlist.html` から `src/elements/.../*.html` を再生成します。手で追加したHTMLと同名のファイルがある場合は上書きされるため、追加分は新しい番号のファイル名にしてください。
+既存HTML内のパスは書き換えていません。`/common/css/common.css` などのルート相対パスを有効にする場合は、該当アセットを `public/common/...` に置くか、ローカルの `downloaded_site/` に置いてください。
 
-## メモ
-
-既存HTML内のパスは書き換えていません。`/common/css/common.css` などのルート相対パスを有効にする場合は、該当アセットを `public/common/...` のように配置してください。
+`downloaded_site/` はGit管理対象外です。

@@ -1,19 +1,21 @@
 {
-  "name": "astro-elementlist",
+  "name": "storybook-elementlist",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
+    "start": "npm run storybook",
     "generate": "node scripts/generate-elements.mjs",
-    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
-    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
-    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
-    "serve:dist": "node scripts/serve-dist.mjs"
-  },
-  "dependencies": {
-    "astro": "^5.0.0"
+    "dev": "npm run storybook",
+    "watch": "npm run storybook",
+    "build": "npm run build-storybook",
+    "serve": "node scripts/serve-storybook.mjs",
+    "storybook": "HOME=$PWD/.cache/storybook-home STORYBOOK_DISABLE_TELEMETRY=1 storybook dev -p 6006 --host 127.0.0.1",
+    "build-storybook": "HOME=$PWD/.cache/storybook-home STORYBOOK_DISABLE_TELEMETRY=1 storybook build"
   },
   "devDependencies": {
-    "rollup": "npm:@rollup/wasm-node@^4.60.4"
+    "@storybook/html-vite": "^10.4.1",
+    "rollup": "npm:@rollup/wasm-node@^4.60.4",
+    "storybook": "^10.4.1"
   }
 }
