@@ -62,12 +62,16 @@ src/elements/
       </section>
     </div>
   </div>
+  <script type="text/plain" data-element-copy>
+<a href="#DUMMY" class="e-btn"><span class="e-btn__txt">ボタン</span></a>
+  </script>
 </template>
 ```
 
-- `<template>` の中身: プレビュー表示、ソースコード表示、コピーボタンのコピー対象
-- タイトル: 中の `.e-h2--element` または `.e-h1--element` から自動取得
-- ID: 見出しの `id` から自動取得。なければタイトルから自動生成
+- `<template>` の中身: プレビュー表示
+- `<script type="text/plain" data-element-copy>` の中身: ソースコード表示、コピーボタンのコピー対象
+- タイトル: 見出し、`code`内のクラス名、コピー用HTMLなどから自動取得
+- ID: タイトルから自動生成。同じIDがある場合は自動で連番化
 
 詳しい更新手順は [docs/element-management.md](docs/element-management.md) を参照してください。
 

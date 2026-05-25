@@ -2,8 +2,10 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const sourcePath = path.resolve("downloaded_site/elementlist.html");
-const commonCssPath = path.resolve("downloaded_site/common/css/common.css");
+const commonCssPath = path.resolve("public/common/css/common.css");
 const elementsDir = path.resolve("src/elements");
+const UTILITY_SAMPLE_TEXT =
+  "これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。";
 const SPLIT_BY_HEADING_TITLES = new Set([
   "H1見出し＋リード文",
   "Figure / Grid",
@@ -109,6 +111,44 @@ const utilityCategoryDefinitions = [
     test: () => true
   }
 ];
+const commonClassCategoryDefinitions = [
+  {
+    id: "common-layout",
+    file: "14-common-layout.html",
+    title: "Common CSS: レイアウト",
+    test: (name) => /^l-/.test(name)
+  },
+  {
+    id: "common-component",
+    file: "15-common-component.html",
+    title: "Common CSS: コンポーネント",
+    test: (name) => /^c-/.test(name)
+  },
+  {
+    id: "common-element",
+    file: "16-common-element.html",
+    title: "Common CSS: エレメント",
+    test: (name) => /^e-/.test(name)
+  },
+  {
+    id: "common-module",
+    file: "17-common-module.html",
+    title: "Common CSS: モジュール",
+    test: (name) => /^m-/.test(name)
+  },
+  {
+    id: "common-state",
+    file: "18-common-state.html",
+    title: "Common CSS: 状態・JS",
+    test: (name) => /^is-|^js-/.test(name)
+  },
+  {
+    id: "common-other",
+    file: "19-common-other.html",
+    title: "Common CSS: その他",
+    test: () => true
+  }
+];
 
 const html = await readFile(sourcePath, "utf8");
 const lines = html.split(/\r?\n/);
@@ -138,7 +178,14 @@ for (const category of categoryDefinitions) {
   generatedCategories.push(category);
 }
 
-for (const category of createUtilityCategories(await readFile(commonCssPath, "utf8"))) {
+const commonCss = await readFile(commonCssPath, "utf8");
+
+for (const category of createUtilityCategories(commonCss)) {
+  await writeFile(path.join(elementsDir, category.file), renderCategoryFile(category, category.elements));
+  generatedCategories.push(category);
+}
+
+for (const category of createCommonClassCategories(commonCss)) {
   await writeFile(path.join(elementsDir, category.file), renderCategoryFile(category, category.elements));
   generatedCategories.push(category);
 }
@@ -355,9 +402,18 @@ function splitByHeadings(element) {
       ...element,
       title,
       id: cleanId(lines[start]) || slugify(title),
-      html
+      html,
+      copy: sourceHtmlForElement(title, html)
     };
   });
+}
+
+function sourceHtmlForElement(title, html) {
+  if (title.endsWith(" - リード文")) {
+    return extractFirstTagBlock(html, "p", /e-txt--lead/);
+  }
+
+  return "";
 }
 
 function splitRepeatedBlocks(element, tag, pattern, titlePrefix, requireStartMatch = true) {
@@ -454,6 +510,10 @@ function extractMatchingTagBlocks(lines, tag, contentPattern, startPattern = nul
   }
 
   return blocks;
+}
+
+function extractFirstTagBlock(html, tag, contentPattern) {
+  return extractMatchingTagBlocks(html.split(/\r?\n/), tag, contentPattern).at(0) || "";
 }
 
 function countMatches(value, pattern) {
@@ -586,7 +646,7 @@ function uniquifyTitles(elements) {
 }
 
 function createUtilityCategories(css) {
-  const utilities = extractUtilityClasses(css);
+  const utilities = extractCssClasses(css).filter((cssClass) => cssClass.name.startsWith("u-"));
   const categories = utilityCategoryDefinitions.map((category) => ({
     ...category,
     elements: []
@@ -600,26 +660,58 @@ function createUtilityCategories(css) {
   return categories.filter((category) => category.elements.length > 0);
 }
 
-function extractUtilityClasses(css) {
-  const utilities = new Map();
+function createCommonClassCategories(css) {
+  const cssClasses = extractCssClasses(css).filter((cssClass) => !cssClass.name.startsWith("u-"));
+  const categories = commonClassCategoryDefinitions.map((category) => ({
+    ...category,
+    elements: []
+  }));
+
+  for (const cssClass of cssClasses) {
+    const category = categories.find((candidate) => candidate.test(cssClass.name));
+    category.elements.push(renderCommonClassElement(cssClass));
+  }
+
+  return categories.filter((category) => category.elements.length > 0);
+}
+
+function extractCssClasses(css) {
+  const classes = new Map();
+  const cleanCss = css
+    .replace(/\/\*[\s\S]*?\*\//g, "")
+    .replace(/@charset\s+[^;]+;/g, "");
   const rulePattern = /([^{}]+)\{([^{}]+)\}/g;
 
-  for (const match of css.matchAll(rulePattern)) {
-    const selector = match[1];
+  for (const match of cleanCss.matchAll(rulePattern)) {
+    const selector = normalizeSelector(match[1]);
     const declarations = normalizeDeclarations(match[2]);
 
-    for (const classMatch of selector.matchAll(/\.((?:u)-[A-Za-z0-9_-]+)/g)) {
+    if (!selector || selector.startsWith("@") || !declarations) {
+      continue;
+    }
+
+    for (const classMatch of selector.matchAll(/\.(-?[_a-zA-Z][_a-zA-Z0-9-]*)/g)) {
       const name = classMatch[1];
-      if (!utilities.has(name)) {
-        utilities.set(name, {
+      if (!classes.has(name)) {
+        classes.set(name, {
           name,
-          declarations
+          declarations,
+          rules: []
         });
       }
+      classes.get(name).rules.push({ selector, declarations });
     }
   }
 
-  return Array.from(utilities.values()).sort((a, b) => a.name.localeCompare(b.name, "ja"));
+  return Array.from(classes.values()).sort((a, b) => a.name.localeCompare(b.name, "ja"));
+}
+
+function normalizeSelector(source) {
+  return source
+    .split(",")
+    .map((selector) => selector.trim().replace(/\s+/g, " "))
+    .filter(Boolean)
+    .join(",\n");
 }
 
 function normalizeDeclarations(source) {
@@ -632,6 +724,8 @@ function normalizeDeclarations(source) {
 }
 
 function renderUtilityElement(utility) {
+  const declarations = utility.declarations || utility.rules[0]?.declarations || "";
+
   return {
     title: `.${utility.name}`,
     id: slugify(utility.name),
@@ -639,20 +733,97 @@ function renderUtilityElement(utility) {
     html: [
       `<div class="utility-class">`,
       `  <p class="utility-class__name"><code>.${escapeHtml(utility.name)}</code></p>`,
-      `  <pre class="utility-class__rule"><code>${escapeHtml(utility.declarations)}</code></pre>`,
+      `  <pre class="utility-class__rule"><code>${escapeHtml(declarations)}</code></pre>`,
       `  <div class="utility-class__demo">`,
-      `    <span class="utility-class__sample ${escapeHtml(utility.name)}">Sample text</span>`,
+      `    <span class="utility-class__sample ${escapeHtml(utility.name)}">${escapeHtml(UTILITY_SAMPLE_TEXT)}</span>`,
       `  </div>`,
       `</div>`
     ].join("\n")
   };
 }
 
+function renderCommonClassElement(cssClass) {
+  const sampleHtml = renderCommonClassSampleHtml(cssClass.name);
+
+  return {
+    title: `.${cssClass.name}`,
+    id: slugify(cssClass.name),
+    copy: sampleHtml,
+    html: [
+      `<div class="css-class-reference">`,
+      `  <p class="css-class-reference__name"><code>.${escapeHtml(cssClass.name)}</code></p>`,
+      `  <div class="css-class-reference__demo">`,
+      indent(renderCommonClassPreviewHtml(cssClass.name, sampleHtml)),
+      `  </div>`,
+      `  <pre class="css-class-reference__rule"><code>${escapeHtml(renderCssRules(cssClass.rules))}</code></pre>`,
+      `</div>`
+    ].join("\n")
+  };
+}
+
+function renderCommonClassSampleHtml(className) {
+  return `<div class="${escapeAttr(className)}">${escapeHtml(UTILITY_SAMPLE_TEXT)}</div>`;
+}
+
+function renderCommonClassPreviewHtml(className, sampleHtml) {
+  return `<iframe class="css-class-reference__frame" title=".${escapeAttr(className)} preview" srcdoc="${escapeAttr(renderPreviewDocument(sampleHtml))}"></iframe>`;
+}
+
+function renderPreviewDocument(sampleHtml) {
+  return [
+    `<!doctype html>`,
+    `<html lang="ja">`,
+    `<head>`,
+    `<meta charset="utf-8">`,
+    `<link rel="stylesheet" href="/common/css/common.css">`,
+    `<style>`,
+    `html, body { margin: 0; min-height: 100%; background: #fff; }`,
+    `body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }`,
+    `img { max-width: 100%; height: auto; }`,
+    `</style>`,
+    `</head>`,
+    `<body>`,
+    sampleHtml,
+    `</body>`,
+    `</html>`
+  ].join("");
+}
+
+function renderCssRules(rules) {
+  const uniqueRules = [];
+  const seen = new Set();
+
+  for (const rule of rules) {
+    const key = `${rule.selector}\n${rule.declarations}`;
+    if (seen.has(key)) {
+      continue;
+    }
+    seen.add(key);
+    uniqueRules.push(rule);
+  }
+
+  const visibleRules = uniqueRules.slice(0, 6);
+  const snippets = visibleRules.map((rule) => `${rule.selector} {\n${indent(rule.declarations)}\n}`);
+
+  if (uniqueRules.length > visibleRules.length) {
+    snippets.push(`/* 他 ${uniqueRules.length - visibleRules.length} 件の関連ルール */`);
+  }
+
+  return snippets.join("\n\n");
+}
+
+function indent(source) {
+  return source
+    .split("\n")
+    .map((line) => `  ${line}`)
+    .join("\n");
+}
+
 function renderCategoryFile(category, elements) {
   const header = [
     `<!--`,
     `  category: ${category.title}`,
-    `  usage: Add one template block per element. The template content is the copy target.`,
+    `  usage: Add one template block per element. Preview HTML goes in template, copy HTML goes in data-element-copy.`,
     `-->`
   ].join("\n");
 
@@ -661,15 +832,18 @@ function renderCategoryFile(category, elements) {
 }
 
 function renderTemplate(_category, element) {
-  const hasHeading = /<h[1-6]\b/i.test(element.html);
-  const attrs = [
-    hasHeading ? "" : `data-title="${escapeAttr(element.title)}" data-id="${escapeAttr(element.id)}"`,
-    element.copy ? `data-copy="${escapeAttr(element.copy)}"` : ""
-  ].filter(Boolean).join(" ");
+  const copySource = element.copy || element.html;
 
-  return `<template${attrs ? ` ${attrs}` : ""}>
+  return `<template>
 ${element.html}
+${renderCopyBlock(copySource)}
 </template>`;
+}
+
+function renderCopyBlock(source) {
+  return `<script type="text/plain" data-element-copy>
+${String(source).trim()}
+</script>`;
 }
 
 function cleanTitle(line) {
@@ -697,7 +871,11 @@ function slugify(value) {
 }
 
 function escapeAttr(value) {
-  return String(value).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
 }
 
 function escapeHtml(value) {

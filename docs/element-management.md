@@ -61,25 +61,32 @@ http://127.0.0.1:4321/
 
 ```html
 <template>
-  <!-- ここに貼り付けたHTMLがプレビューとコピー対象になります -->
+  <!-- ここに貼り付けたHTMLがプレビューになります -->
+  <script type="text/plain" data-element-copy>
+<!-- ここに貼り付けたHTMLがソースコード表示とコピー対象になります -->
+  </script>
 </template>
 ```
 
-通常は `<template>` に属性を書く必要はありません。
+通常は `<template>` に属性を書く必要はありません。タイトルやIDも手入力しません。
 
-画面に表示されるタイトルは、中にある `.e-h2--element` または `.e-h1--element` のテキストから自動取得されます。
-
-エレメントのIDは、見出しに `id` があればそれを使います。なければタイトルから自動生成します。
-
-見出しがないHTMLだけを登録したい場合や、タイトルを手動指定したい場合だけ、任意で `data-title` / `data-id` を使えます。
+プレビュー用のHTMLと、実際にCMSへ貼り付けたいHTMLは分けて考えます。コピー対象のHTMLは、`<script type="text/plain" data-element-copy>` にそのまま書きます。この中では `"` や `<` を実体参照文字に変換する必要はありません。
 
 ```html
-<template data-title="補足リンク" data-id="support-link">
-  <a href="#DUMMY">補足リンク</a>
+<template>
+  <h2 class="e-h2--element"># リード文</h2>
+  <div class="m-lead">
+    <p class="e-txt--lead">リード文テキスト</p>
+  </div>
+  <script type="text/plain" data-element-copy>
+<p class="e-txt--lead">リード文テキスト</p>
+  </script>
 </template>
 ```
 
-`npm run generate` で自動生成された小さなパーツには、見出しを持たないものがあります。その場合は生成スクリプトが `data-title` / `data-id` を自動で付けます。手作業で通常のエレメントを追加するときは、基本的に入力不要です。
+画面に表示されるタイトルは、見出し、`code`内のクラス名、コピー用HTMLのクラス名やテキストから自動取得されます。
+
+エレメントのIDはタイトルから自動生成されます。同じIDがある場合は自動で連番が付きます。
 
 ## カテゴリの選び方
 
@@ -104,7 +111,7 @@ http://127.0.0.1:4321/
 ```html
 <!--
   category: 新しいカテゴリ名
-  usage: Add one template block per element. The template content is the copy target.
+  usage: Add one template block per element. Preview HTML goes in template, copy HTML goes in data-element-copy.
 -->
 
 <template>
@@ -118,6 +125,9 @@ http://127.0.0.1:4321/
       </section>
     </div>
   </div>
+  <script type="text/plain" data-element-copy>
+<div>Sample</div>
+  </script>
 </template>
 ```
 

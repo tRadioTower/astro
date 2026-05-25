@@ -178,6 +178,68 @@
   font-weight: 700;
 }
 
+.element-sidenav__item--category a[aria-current="page"] {
+  color: #0969da;
+}
+
+.element-category-index {
+  padding: 32px 24px;
+}
+
+.element-category-index__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.element-category-index__title {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.element-category-index__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.element-category-index__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 58px;
+  padding: 14px 16px;
+  color: #1f2328;
+  text-decoration: none;
+  background: #ffffff;
+  border: 1px solid #d8dee4;
+  border-radius: 8px;
+}
+
+.element-category-index__item:hover {
+  color: #0969da;
+  border-color: #8c959f;
+}
+
+.element-category-index__item-title {
+  min-width: 0;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.element-category-index__item-count {
+  flex: 0 0 auto;
+  color: #57606a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .element-category {
   padding: 32px 24px;
 }
@@ -333,6 +395,51 @@
   border: 1px solid #d8dee4;
 }
 
+.css-class-reference {
+  display: grid;
+  gap: 12px;
+}
+
+.css-class-reference__name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.css-class-reference__name code,
+.css-class-reference__rule code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.css-class-reference__demo {
+  padding: 12px;
+  overflow: auto;
+  background: linear-gradient(90deg, #f6f8fa 24px, transparent 1%) center / 48px 48px,
+    linear-gradient(#f6f8fa 24px, transparent 1%) center / 48px 48px;
+  border: 1px dashed #8c959f;
+  border-radius: 6px;
+}
+
+.css-class-reference__frame {
+  display: block;
+  width: 100%;
+  min-height: 160px;
+  background: #ffffff;
+  border: 0;
+}
+
+.css-class-reference__rule {
+  max-height: 360px;
+  margin: 0;
+  padding: 12px;
+  overflow: auto;
+  color: #1f2328;
+  white-space: pre-wrap;
+  background: #f6f8fa;
+  border: 1px solid #d8dee4;
+  border-radius: 6px;
+}
+
 @media screen and (max-width: 736px) {
   .element-list__header,
   .element-category {
@@ -355,6 +462,10 @@
 
   .element-list__body {
     display: block;
+  }
+
+  .element-category-index__list {
+    grid-template-columns: 1fr;
   }
 
   .element-sidenav {

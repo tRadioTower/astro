@@ -1,43 +1,24 @@
 ---
 import ElementListLayout from "../layouts/ElementListLayout.astro";
-import ElementCategory from "../components/ElementCategory.astro";
+import ElementSideNav from "../components/ElementSideNav.astro";
 import { elementCategories } from "../data/elementCategories.js";
-import "../styles/element-list.css";
 ---
 
-<ElementListLayout title="エレメントリスト">
-  <aside class="element-sidenav" aria-label="エレメント一覧">
-    <nav class="element-sidenav__nav">
-      {elementCategories.map((category) => (
-        <details class="element-sidenav__group" data-element-nav-group>
-          <summary class="element-sidenav__summary">
-            <span class="element-sidenav__category">{category.title}</span>
-            <span class="element-sidenav__count">{category.elements.length}</span>
-          </summary>
-          <ul class="element-sidenav__list">
-            <li class="element-sidenav__item element-sidenav__item--category">
-              <a href={`#${category.id}-heading`}>カテゴリ先頭へ</a>
-            </li>
-            {category.elements.map((element, index) => {
-              const targetId = `element-card-${category.id}-${index}`;
-              return (
-                <li class="element-sidenav__item" data-element-nav-item data-nav-target={targetId}>
-                  <a href={`#${targetId}`}>{element.title}</a>
-                </li>
-              );
-            })}
-          </ul>
-        </details>
-      ))}
-    </nav>
-  </aside>
+<ElementListLayout title="エレメントリスト" showSearch={false}>
+  <ElementSideNav categories={elementCategories} />
   <div class="element-list__content">
-    {elementCategories.map((category) => (
-      <ElementCategory
-        title={category.title}
-        elements={category.elements}
-        indexPrefix={category.id}
-      />
-    ))}
+    <section class="element-category-index" aria-labelledby="category-index-heading">
+      <div class="element-category-index__inner">
+        <h2 class="element-category-index__title" id="category-index-heading">カテゴリ一覧</h2>
+        <div class="element-category-index__list">
+          {elementCategories.map((category) => (
+            <a class="element-category-index__item" href={`/categories/${category.id}.html`}>
+              <span class="element-category-index__item-title">{category.title}</span>
+              <span class="element-category-index__item-count">{category.elements.length}件</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
   </div>
 </ElementListLayout>

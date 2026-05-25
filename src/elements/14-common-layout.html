@@ -1,0 +1,350 @@
+<!--
+  category: Common CSS: レイアウト
+  usage: Add one template block per element. Preview HTML goes in template, copy HTML goes in data-element-copy.
+-->
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.l-content</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".l-content preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;l-content&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.l-content {
+  margin-bottom: 10px;
+}
+
+.l-content {
+  margin-bottom: 8px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="l-content">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.l-content__inner</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".l-content__inner preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;l-content__inner&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.l-content__inner,
+.l-content--1col__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 988px;
+  margin: 40px auto 0;
+}
+
+.l-content__inner,
+.l-content--1col__inner {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.l-content__inner,
+.l-content--1col__inner {
+  margin: 32px auto 0;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="l-content__inner">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.l-content__main</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".l-content__main preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;l-content__main&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.l-content__main {
+  width: 700px;
+}
+
+.l-content__main .e-h1 {
+  margin-top: 24px;
+}
+
+.l-content__main {
+  width: 100%;
+}
+
+.l-content__main .m-list-navi__item {
+  width: 50%;
+}
+
+.l-content__main .m-list-navi__item {
+  width: auto;
+}
+
+.l-content__main .m-list-navi--img__item {
+  width: 50%;
+}
+
+/* 他 1 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="l-content__main">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.l-content__sub</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".l-content__sub preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;l-content__sub&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.l-content__sub {
+  width: 220px;
+  margin-bottom: 26px;
+}
+
+.l-content__sub {
+  width: 100%;
+  margin-bottom: 0;
+  border-top: solid 1px #dedede;
+  padding-top: 32px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="l-content__sub">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.l-content--1col</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".l-content--1col preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;l-content--1col&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.l-content--1col {
+  margin-bottom: 100px;
+}
+
+.l-content--1col {
+  margin-bottom: 72px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="l-content--1col">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.l-content--1col__inner</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".l-content--1col__inner preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;l-content--1col__inner&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.l-content__inner,
+.l-content--1col__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 988px;
+  margin: 40px auto 0;
+}
+
+.l-content__inner,
+.l-content--1col__inner {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.l-content--1col__inner {
+  display: block;
+}
+
+.l-content__inner,
+.l-content--1col__inner {
+  margin: 32px auto 0;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="l-content--1col__inner">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.l-content--top</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".l-content--top preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;l-content--top&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.l-content--top {
+  margin-bottom: 100px;
+}
+
+.l-content--top .c-unit__inner {
+  max-width: 988px;
+}
+
+.l-content--top .c-unit {
+  padding: 56px 0 64px;
+}
+
+.l-content--top .c-unit {
+  padding: 48px 0 56px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="l-content--top">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.l-footer</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".l-footer preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;l-footer&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.l-footer,
+.l-footer--simple {
+  position: relative;
+  background-color: #ededed;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="l-footer">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.l-footer--simple</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".l-footer--simple preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;l-footer--simple&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.l-footer,
+.l-footer--simple {
+  position: relative;
+  background-color: #ededed;
+}
+
+.l-footer--simple .m-footer-sub {
+  border-top: 0;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="l-footer--simple">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.l-header</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".l-header preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;l-header&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.l-header,
+.l-header--simple {
+  position: relative;
+  z-index: 1000;
+  background-size: 1px 24px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="l-header">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.l-header--simple</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".l-header--simple preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;l-header--simple&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.l-header--simple {
+  border-bottom: solid 1px #ededed;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ededed));
+  background-image: linear-gradient(to bottom, #ededed 0%, #ededed 100%);
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-size: 1px 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 96px;
+}
+
+.l-header,
+.l-header--simple {
+  position: relative;
+  z-index: 1000;
+  background-size: 1px 24px;
+}
+
+.l-header--simple {
+  height: 52px;
+  padding-right: 52px;
+}
+
+.l-header--simple {
+  background-image: none;
+}
+
+.l-header--simple img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.l-header--simple .m-header {
+  height: 52px;
+  background-color: transparent;
+  margin-left: 0;
+}
+
+/* 他 2 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="l-header--simple">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.l-wrapper</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".l-wrapper preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;l-wrapper&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.l-wrapper {
+  min-width: 1024px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.l-wrapper {
+  min-width: 320px;
+}
+
+.l-wrapper.is-fixed {
+  overflow: hidden;
+  width: 100%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="l-wrapper">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>

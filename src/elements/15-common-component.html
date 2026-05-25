@@ -1,0 +1,2622 @@
+<!--
+  category: Common CSS: コンポーネント
+  usage: Add one template block per element. Preview HTML goes in template, copy HTML goes in data-element-copy.
+-->
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-flex-col</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-flex-col preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-flex-col&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-flex-col {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-flex-col&gt;* {
+  width:50%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-flex-col">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--2col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.c-grid--3col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 33.33333%;
+  flex-basis: 33.33333%;
+  max-width: 33.33333%;
+}
+
+.c-grid--4col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.c-grid--5col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+  max-width: 20%;
+}
+
+.c-grid--6col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 16.66667%;
+  flex-basis: 16.66667%;
+  max-width: 16.66667%;
+}
+
+.c-grid--7col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 14.28571%;
+  flex-basis: 14.28571%;
+  max-width: 14.28571%;
+}
+
+/* 他 47 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_10</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_10 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_10&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--10col &gt; .c-grid__col--colspan_10 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--11col &gt; .c-grid__col--colspan_10 {
+  -ms-flex-preferred-size: 90.90909%;
+  flex-basis: 90.90909%;
+  max-width: 90.90909%;
+}
+
+.c-grid--12col &gt; .c-grid__col--colspan_10 {
+  -ms-flex-preferred-size: 83.33333%;
+  flex-basis: 83.33333%;
+  max-width: 83.33333%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_10">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_10-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_10-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_10-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--10col-sp &gt; .c-grid__col--colspan_10-sp {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--11col-sp &gt; .c-grid__col--colspan_10-sp {
+  -ms-flex-preferred-size: 90.90909%;
+  flex-basis: 90.90909%;
+  max-width: 90.90909%;
+}
+
+.c-grid--12col-sp &gt; .c-grid__col--colspan_10-sp {
+  -ms-flex-preferred-size: 83.33333%;
+  flex-basis: 83.33333%;
+  max-width: 83.33333%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_10-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_11</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_11 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_11&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--11col &gt; .c-grid__col--colspan_11 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--12col &gt; .c-grid__col--colspan_11 {
+  -ms-flex-preferred-size: 91.66667%;
+  flex-basis: 91.66667%;
+  max-width: 91.66667%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_11">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_11-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_11-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_11-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--11col-sp &gt; .c-grid__col--colspan_11-sp {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--12col-sp &gt; .c-grid__col--colspan_11-sp {
+  -ms-flex-preferred-size: 91.66667%;
+  flex-basis: 91.66667%;
+  max-width: 91.66667%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_11-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_12</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_12 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_12&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--12col &gt; .c-grid__col--colspan_12 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_12">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_12-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_12-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_12-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--12col-sp &gt; .c-grid__col--colspan_12-sp {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_12-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_2</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_2 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_2&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--2col &gt; .c-grid__col--colspan_2 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--3col &gt; .c-grid__col--colspan_2 {
+  -ms-flex-preferred-size: 66.66667%;
+  flex-basis: 66.66667%;
+  max-width: 66.66667%;
+}
+
+.c-grid--4col &gt; .c-grid__col--colspan_2 {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.c-grid--5col &gt; .c-grid__col--colspan_2 {
+  -ms-flex-preferred-size: 40%;
+  flex-basis: 40%;
+  max-width: 40%;
+}
+
+.c-grid--6col &gt; .c-grid__col--colspan_2 {
+  -ms-flex-preferred-size: 33.33333%;
+  flex-basis: 33.33333%;
+  max-width: 33.33333%;
+}
+
+.c-grid--7col &gt; .c-grid__col--colspan_2 {
+  -ms-flex-preferred-size: 28.57143%;
+  flex-basis: 28.57143%;
+  max-width: 28.57143%;
+}
+
+/* 他 7 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_2">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_2-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_2-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_2-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--2col-sp &gt; .c-grid__col--colspan_2-sp {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--3col-sp &gt; .c-grid__col--colspan_2-sp {
+  -ms-flex-preferred-size: 66.66667%;
+  flex-basis: 66.66667%;
+  max-width: 66.66667%;
+}
+
+.c-grid--4col-sp &gt; .c-grid__col--colspan_2-sp {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.c-grid--5col-sp &gt; .c-grid__col--colspan_2-sp {
+  -ms-flex-preferred-size: 40%;
+  flex-basis: 40%;
+  max-width: 40%;
+}
+
+.c-grid--6col-sp &gt; .c-grid__col--colspan_2-sp {
+  -ms-flex-preferred-size: 33.33333%;
+  flex-basis: 33.33333%;
+  max-width: 33.33333%;
+}
+
+.c-grid--7col-sp &gt; .c-grid__col--colspan_2-sp {
+  -ms-flex-preferred-size: 28.57143%;
+  flex-basis: 28.57143%;
+  max-width: 28.57143%;
+}
+
+/* 他 5 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_2-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_3</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_3 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_3&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--3col &gt; .c-grid__col--colspan_3 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--4col &gt; .c-grid__col--colspan_3 {
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+.c-grid--5col &gt; .c-grid__col--colspan_3 {
+  -ms-flex-preferred-size: 60%;
+  flex-basis: 60%;
+  max-width: 60%;
+}
+
+.c-grid--6col &gt; .c-grid__col--colspan_3 {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.c-grid--7col &gt; .c-grid__col--colspan_3 {
+  -ms-flex-preferred-size: 42.85714%;
+  flex-basis: 42.85714%;
+  max-width: 42.85714%;
+}
+
+.c-grid--8col &gt; .c-grid__col--colspan_3 {
+  -ms-flex-preferred-size: 37.5%;
+  flex-basis: 37.5%;
+  max-width: 37.5%;
+}
+
+/* 他 4 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_3">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_3-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_3-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_3-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--3col-sp &gt; .c-grid__col--colspan_3-sp {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--4col-sp &gt; .c-grid__col--colspan_3-sp {
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+.c-grid--5col-sp &gt; .c-grid__col--colspan_3-sp {
+  -ms-flex-preferred-size: 60%;
+  flex-basis: 60%;
+  max-width: 60%;
+}
+
+.c-grid--6col-sp &gt; .c-grid__col--colspan_3-sp {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.c-grid--7col-sp &gt; .c-grid__col--colspan_3-sp {
+  -ms-flex-preferred-size: 42.85714%;
+  flex-basis: 42.85714%;
+  max-width: 42.85714%;
+}
+
+.c-grid--8col-sp &gt; .c-grid__col--colspan_3-sp {
+  -ms-flex-preferred-size: 37.5%;
+  flex-basis: 37.5%;
+  max-width: 37.5%;
+}
+
+/* 他 4 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_3-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_4</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_4 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_4&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--4col &gt; .c-grid__col--colspan_4 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--5col &gt; .c-grid__col--colspan_4 {
+  -ms-flex-preferred-size: 80%;
+  flex-basis: 80%;
+  max-width: 80%;
+}
+
+.c-grid--6col &gt; .c-grid__col--colspan_4 {
+  -ms-flex-preferred-size: 66.66667%;
+  flex-basis: 66.66667%;
+  max-width: 66.66667%;
+}
+
+.c-grid--7col &gt; .c-grid__col--colspan_4 {
+  -ms-flex-preferred-size: 57.14286%;
+  flex-basis: 57.14286%;
+  max-width: 57.14286%;
+}
+
+.c-grid--8col &gt; .c-grid__col--colspan_4 {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.c-grid--9col &gt; .c-grid__col--colspan_4 {
+  -ms-flex-preferred-size: 44.44444%;
+  flex-basis: 44.44444%;
+  max-width: 44.44444%;
+}
+
+/* 他 3 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_4">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_4-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_4-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_4-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--4col-sp &gt; .c-grid__col--colspan_4-sp {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--5col-sp &gt; .c-grid__col--colspan_4-sp {
+  -ms-flex-preferred-size: 80%;
+  flex-basis: 80%;
+  max-width: 80%;
+}
+
+.c-grid--6col-sp &gt; .c-grid__col--colspan_4-sp {
+  -ms-flex-preferred-size: 66.66667%;
+  flex-basis: 66.66667%;
+  max-width: 66.66667%;
+}
+
+.c-grid--7col-sp &gt; .c-grid__col--colspan_4-sp {
+  -ms-flex-preferred-size: 57.14286%;
+  flex-basis: 57.14286%;
+  max-width: 57.14286%;
+}
+
+.c-grid--8col-sp &gt; .c-grid__col--colspan_4-sp {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.c-grid--9col-sp &gt; .c-grid__col--colspan_4-sp {
+  -ms-flex-preferred-size: 44.44444%;
+  flex-basis: 44.44444%;
+  max-width: 44.44444%;
+}
+
+/* 他 3 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_4-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_5</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_5 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_5&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--5col &gt; .c-grid__col--colspan_5 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--6col &gt; .c-grid__col--colspan_5 {
+  -ms-flex-preferred-size: 83.33333%;
+  flex-basis: 83.33333%;
+  max-width: 83.33333%;
+}
+
+.c-grid--7col &gt; .c-grid__col--colspan_5 {
+  -ms-flex-preferred-size: 71.42857%;
+  flex-basis: 71.42857%;
+  max-width: 71.42857%;
+}
+
+.c-grid--8col &gt; .c-grid__col--colspan_5 {
+  -ms-flex-preferred-size: 62.5%;
+  flex-basis: 62.5%;
+  max-width: 62.5%;
+}
+
+.c-grid--9col &gt; .c-grid__col--colspan_5 {
+  -ms-flex-preferred-size: 55.55556%;
+  flex-basis: 55.55556%;
+  max-width: 55.55556%;
+}
+
+.c-grid--10col &gt; .c-grid__col--colspan_5 {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+/* 他 2 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_5">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_5-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_5-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_5-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--5col-sp &gt; .c-grid__col--colspan_5-sp {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--6col-sp &gt; .c-grid__col--colspan_5-sp {
+  -ms-flex-preferred-size: 83.33333%;
+  flex-basis: 83.33333%;
+  max-width: 83.33333%;
+}
+
+.c-grid--7col-sp &gt; .c-grid__col--colspan_5-sp {
+  -ms-flex-preferred-size: 71.42857%;
+  flex-basis: 71.42857%;
+  max-width: 71.42857%;
+}
+
+.c-grid--8col-sp &gt; .c-grid__col--colspan_5-sp {
+  -ms-flex-preferred-size: 62.5%;
+  flex-basis: 62.5%;
+  max-width: 62.5%;
+}
+
+.c-grid--9col-sp &gt; .c-grid__col--colspan_5-sp {
+  -ms-flex-preferred-size: 55.55556%;
+  flex-basis: 55.55556%;
+  max-width: 55.55556%;
+}
+
+.c-grid--10col-sp &gt; .c-grid__col--colspan_5-sp {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+/* 他 2 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_5-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_6</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_6 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_6&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--6col &gt; .c-grid__col--colspan_6 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--7col &gt; .c-grid__col--colspan_6 {
+  -ms-flex-preferred-size: 85.71429%;
+  flex-basis: 85.71429%;
+  max-width: 85.71429%;
+}
+
+.c-grid--8col &gt; .c-grid__col--colspan_6 {
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+.c-grid--9col &gt; .c-grid__col--colspan_6 {
+  -ms-flex-preferred-size: 66.66667%;
+  flex-basis: 66.66667%;
+  max-width: 66.66667%;
+}
+
+.c-grid--10col &gt; .c-grid__col--colspan_6 {
+  -ms-flex-preferred-size: 60%;
+  flex-basis: 60%;
+  max-width: 60%;
+}
+
+.c-grid--11col &gt; .c-grid__col--colspan_6 {
+  -ms-flex-preferred-size: 54.54545%;
+  flex-basis: 54.54545%;
+  max-width: 54.54545%;
+}
+
+/* 他 1 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_6">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_6-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_6-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_6-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--6col-sp &gt; .c-grid__col--colspan_6-sp {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--7col-sp &gt; .c-grid__col--colspan_6-sp {
+  -ms-flex-preferred-size: 85.71429%;
+  flex-basis: 85.71429%;
+  max-width: 85.71429%;
+}
+
+.c-grid--8col-sp &gt; .c-grid__col--colspan_6-sp {
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+.c-grid--9col-sp &gt; .c-grid__col--colspan_6-sp {
+  -ms-flex-preferred-size: 66.66667%;
+  flex-basis: 66.66667%;
+  max-width: 66.66667%;
+}
+
+.c-grid--10col-sp &gt; .c-grid__col--colspan_6-sp {
+  -ms-flex-preferred-size: 60%;
+  flex-basis: 60%;
+  max-width: 60%;
+}
+
+.c-grid--11col-sp &gt; .c-grid__col--colspan_6-sp {
+  -ms-flex-preferred-size: 54.54545%;
+  flex-basis: 54.54545%;
+  max-width: 54.54545%;
+}
+
+/* 他 1 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_6-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_7</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_7 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_7&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--7col &gt; .c-grid__col--colspan_7 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--8col &gt; .c-grid__col--colspan_7 {
+  -ms-flex-preferred-size: 87.5%;
+  flex-basis: 87.5%;
+  max-width: 87.5%;
+}
+
+.c-grid--9col &gt; .c-grid__col--colspan_7 {
+  -ms-flex-preferred-size: 77.77778%;
+  flex-basis: 77.77778%;
+  max-width: 77.77778%;
+}
+
+.c-grid--10col &gt; .c-grid__col--colspan_7 {
+  -ms-flex-preferred-size: 70%;
+  flex-basis: 70%;
+  max-width: 70%;
+}
+
+.c-grid--11col &gt; .c-grid__col--colspan_7 {
+  -ms-flex-preferred-size: 63.63636%;
+  flex-basis: 63.63636%;
+  max-width: 63.63636%;
+}
+
+.c-grid--12col &gt; .c-grid__col--colspan_7 {
+  -ms-flex-preferred-size: 58.33333%;
+  flex-basis: 58.33333%;
+  max-width: 58.33333%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_7">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_7-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_7-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_7-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--7col-sp &gt; .c-grid__col--colspan_7-sp {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--8col-sp &gt; .c-grid__col--colspan_7-sp {
+  -ms-flex-preferred-size: 87.5%;
+  flex-basis: 87.5%;
+  max-width: 87.5%;
+}
+
+.c-grid--9col-sp &gt; .c-grid__col--colspan_7-sp {
+  -ms-flex-preferred-size: 77.77778%;
+  flex-basis: 77.77778%;
+  max-width: 77.77778%;
+}
+
+.c-grid--10col-sp &gt; .c-grid__col--colspan_7-sp {
+  -ms-flex-preferred-size: 70%;
+  flex-basis: 70%;
+  max-width: 70%;
+}
+
+.c-grid--11col-sp &gt; .c-grid__col--colspan_7-sp {
+  -ms-flex-preferred-size: 63.63636%;
+  flex-basis: 63.63636%;
+  max-width: 63.63636%;
+}
+
+.c-grid--12col-sp &gt; .c-grid__col--colspan_7-sp {
+  -ms-flex-preferred-size: 58.33333%;
+  flex-basis: 58.33333%;
+  max-width: 58.33333%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_7-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_8</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_8 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_8&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--8col &gt; .c-grid__col--colspan_8 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--9col &gt; .c-grid__col--colspan_8 {
+  -ms-flex-preferred-size: 88.88889%;
+  flex-basis: 88.88889%;
+  max-width: 88.88889%;
+}
+
+.c-grid--10col &gt; .c-grid__col--colspan_8 {
+  -ms-flex-preferred-size: 80%;
+  flex-basis: 80%;
+  max-width: 80%;
+}
+
+.c-grid--11col &gt; .c-grid__col--colspan_8 {
+  -ms-flex-preferred-size: 72.72727%;
+  flex-basis: 72.72727%;
+  max-width: 72.72727%;
+}
+
+.c-grid--12col &gt; .c-grid__col--colspan_8 {
+  -ms-flex-preferred-size: 66.66667%;
+  flex-basis: 66.66667%;
+  max-width: 66.66667%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_8">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_8-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_8-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_8-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--8col-sp &gt; .c-grid__col--colspan_8-sp {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--9col-sp &gt; .c-grid__col--colspan_8-sp {
+  -ms-flex-preferred-size: 88.88889%;
+  flex-basis: 88.88889%;
+  max-width: 88.88889%;
+}
+
+.c-grid--10col-sp &gt; .c-grid__col--colspan_8-sp {
+  -ms-flex-preferred-size: 80%;
+  flex-basis: 80%;
+  max-width: 80%;
+}
+
+.c-grid--11col-sp &gt; .c-grid__col--colspan_8-sp {
+  -ms-flex-preferred-size: 72.72727%;
+  flex-basis: 72.72727%;
+  max-width: 72.72727%;
+}
+
+.c-grid--12col-sp &gt; .c-grid__col--colspan_8-sp {
+  -ms-flex-preferred-size: 66.66667%;
+  flex-basis: 66.66667%;
+  max-width: 66.66667%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_8-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_9</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_9 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_9&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--9col &gt; .c-grid__col--colspan_9 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--10col &gt; .c-grid__col--colspan_9 {
+  -ms-flex-preferred-size: 90%;
+  flex-basis: 90%;
+  max-width: 90%;
+}
+
+.c-grid--11col &gt; .c-grid__col--colspan_9 {
+  -ms-flex-preferred-size: 81.81818%;
+  flex-basis: 81.81818%;
+  max-width: 81.81818%;
+}
+
+.c-grid--12col &gt; .c-grid__col--colspan_9 {
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
+  max-width: 75%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_9">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid__col--colspan_9-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid__col--colspan_9-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid__col--colspan_9-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--9col-sp &gt; .c-grid__col--colspan_9-sp {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c-grid--10col-sp &gt; .c-grid__col--colspan_9-sp {
+  -ms-flex-preferred-size: 90%;
+  flex-basis: 90%;
+  max-width: 90%;
+}
+
+.c-grid--11col-sp &gt; .c-grid__col--colspan_9-sp {
+  -ms-flex-preferred-size: 81.81818%;
+  flex-basis: 81.81818%;
+  max-width: 81.81818%;
+}
+
+.c-grid--12col-sp &gt; .c-grid__col--colspan_9-sp {
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
+  max-width: 75%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid__col--colspan_9-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--10col</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--10col preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--10col&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--10col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 10%;
+  flex-basis: 10%;
+  max-width: 10%;
+}
+
+.c-grid--10col &gt; .c-grid__col--colspan_2 {
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+  max-width: 20%;
+}
+
+.c-grid--10col &gt; .c-grid__col--colspan_3 {
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+  max-width: 30%;
+}
+
+.c-grid--10col &gt; .c-grid__col--colspan_4 {
+  -ms-flex-preferred-size: 40%;
+  flex-basis: 40%;
+  max-width: 40%;
+}
+
+.c-grid--10col &gt; .c-grid__col--colspan_5 {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.c-grid--10col &gt; .c-grid__col--colspan_6 {
+  -ms-flex-preferred-size: 60%;
+  flex-basis: 60%;
+  max-width: 60%;
+}
+
+/* 他 4 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--10col">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--10col-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--10col-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--10col-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--10col-sp &gt; .c-grid__col {
+  -ms-flex-preferred-size: 10%;
+  flex-basis: 10%;
+  max-width: 10%;
+}
+
+.c-grid--10col-sp &gt; .c-grid__col--colspan_2-sp {
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+  max-width: 20%;
+}
+
+.c-grid--10col-sp &gt; .c-grid__col--colspan_3-sp {
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+  max-width: 30%;
+}
+
+.c-grid--10col-sp &gt; .c-grid__col--colspan_4-sp {
+  -ms-flex-preferred-size: 40%;
+  flex-basis: 40%;
+  max-width: 40%;
+}
+
+.c-grid--10col-sp &gt; .c-grid__col--colspan_5-sp {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.c-grid--10col-sp &gt; .c-grid__col--colspan_6-sp {
+  -ms-flex-preferred-size: 60%;
+  flex-basis: 60%;
+  max-width: 60%;
+}
+
+/* 他 4 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--10col-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--11col</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--11col preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--11col&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--11col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 9.09091%;
+  flex-basis: 9.09091%;
+  max-width: 9.09091%;
+}
+
+.c-grid--11col &gt; .c-grid__col--colspan_2 {
+  -ms-flex-preferred-size: 18.18182%;
+  flex-basis: 18.18182%;
+  max-width: 18.18182%;
+}
+
+.c-grid--11col &gt; .c-grid__col--colspan_3 {
+  -ms-flex-preferred-size: 27.27273%;
+  flex-basis: 27.27273%;
+  max-width: 27.27273%;
+}
+
+.c-grid--11col &gt; .c-grid__col--colspan_4 {
+  -ms-flex-preferred-size: 36.36364%;
+  flex-basis: 36.36364%;
+  max-width: 36.36364%;
+}
+
+.c-grid--11col &gt; .c-grid__col--colspan_5 {
+  -ms-flex-preferred-size: 45.45455%;
+  flex-basis: 45.45455%;
+  max-width: 45.45455%;
+}
+
+.c-grid--11col &gt; .c-grid__col--colspan_6 {
+  -ms-flex-preferred-size: 54.54545%;
+  flex-basis: 54.54545%;
+  max-width: 54.54545%;
+}
+
+/* 他 5 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--11col">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--11col-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--11col-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--11col-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--11col-sp &gt; .c-grid__col {
+  -ms-flex-preferred-size: 9.09091%;
+  flex-basis: 9.09091%;
+  max-width: 9.09091%;
+}
+
+.c-grid--11col-sp &gt; .c-grid__col--colspan_2-sp {
+  -ms-flex-preferred-size: 18.18182%;
+  flex-basis: 18.18182%;
+  max-width: 18.18182%;
+}
+
+.c-grid--11col-sp &gt; .c-grid__col--colspan_3-sp {
+  -ms-flex-preferred-size: 27.27273%;
+  flex-basis: 27.27273%;
+  max-width: 27.27273%;
+}
+
+.c-grid--11col-sp &gt; .c-grid__col--colspan_4-sp {
+  -ms-flex-preferred-size: 36.36364%;
+  flex-basis: 36.36364%;
+  max-width: 36.36364%;
+}
+
+.c-grid--11col-sp &gt; .c-grid__col--colspan_5-sp {
+  -ms-flex-preferred-size: 45.45455%;
+  flex-basis: 45.45455%;
+  max-width: 45.45455%;
+}
+
+.c-grid--11col-sp &gt; .c-grid__col--colspan_6-sp {
+  -ms-flex-preferred-size: 54.54545%;
+  flex-basis: 54.54545%;
+  max-width: 54.54545%;
+}
+
+/* 他 5 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--11col-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--12col</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--12col preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--12col&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--12col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 8.33333%;
+  flex-basis: 8.33333%;
+  max-width: 8.33333%;
+}
+
+.c-grid--12col &gt; .c-grid__col--colspan_2 {
+  -ms-flex-preferred-size: 16.66667%;
+  flex-basis: 16.66667%;
+  max-width: 16.66667%;
+}
+
+.c-grid--12col &gt; .c-grid__col--colspan_3 {
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.c-grid--12col &gt; .c-grid__col--colspan_4 {
+  -ms-flex-preferred-size: 33.33333%;
+  flex-basis: 33.33333%;
+  max-width: 33.33333%;
+}
+
+.c-grid--12col &gt; .c-grid__col--colspan_5 {
+  -ms-flex-preferred-size: 41.66667%;
+  flex-basis: 41.66667%;
+  max-width: 41.66667%;
+}
+
+.c-grid--12col &gt; .c-grid__col--colspan_6 {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+/* 他 6 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--12col">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--12col-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--12col-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--12col-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--12col-sp &gt; .c-grid__col {
+  -ms-flex-preferred-size: 8.33333%;
+  flex-basis: 8.33333%;
+  max-width: 8.33333%;
+}
+
+.c-grid--12col-sp &gt; .c-grid__col--colspan_2-sp {
+  -ms-flex-preferred-size: 16.66667%;
+  flex-basis: 16.66667%;
+  max-width: 16.66667%;
+}
+
+.c-grid--12col-sp &gt; .c-grid__col--colspan_3-sp {
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.c-grid--12col-sp &gt; .c-grid__col--colspan_4-sp {
+  -ms-flex-preferred-size: 33.33333%;
+  flex-basis: 33.33333%;
+  max-width: 33.33333%;
+}
+
+.c-grid--12col-sp &gt; .c-grid__col--colspan_5-sp {
+  -ms-flex-preferred-size: 41.66667%;
+  flex-basis: 41.66667%;
+  max-width: 41.66667%;
+}
+
+.c-grid--12col-sp &gt; .c-grid__col--colspan_6-sp {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+/* 他 6 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--12col-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--2col</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--2col preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--2col&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--2col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.c-grid--2col &gt; .c-grid__col--colspan_2 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--2col">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--2col-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--2col-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--2col-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--2col-sp &gt; .c-grid__col {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.c-grid--2col-sp &gt; .c-grid__col--colspan_2-sp {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--2col-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--3arrow-col</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--3arrow-col preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--3arrow-col&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--3arrow-col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+  max-width: 30%;
+}
+
+.c-grid--3arrow-col &gt; .c-grid__col:nth-child(even) {
+  -ms-flex-preferred-size: 5%;
+  flex-basis: 5%;
+  max-width: 5%;
+}
+
+.c-grid--3arrow-col &gt; .c-grid__col,
+.c-grid--3arrow-col &gt; .c-grid__col:nth-child(even) {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--3arrow-col">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--3col</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--3col preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--3col&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--3col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 33.33333%;
+  flex-basis: 33.33333%;
+  max-width: 33.33333%;
+}
+
+.c-grid--3col &gt; .c-grid__col--colspan_2 {
+  -ms-flex-preferred-size: 66.66667%;
+  flex-basis: 66.66667%;
+  max-width: 66.66667%;
+}
+
+.c-grid--3col &gt; .c-grid__col--colspan_3 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--3col">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--3col-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--3col-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--3col-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--3col-sp &gt; .c-grid__col {
+  -ms-flex-preferred-size: 33.33333%;
+  flex-basis: 33.33333%;
+  max-width: 33.33333%;
+}
+
+.c-grid--3col-sp &gt; .c-grid__col--colspan_2-sp {
+  -ms-flex-preferred-size: 66.66667%;
+  flex-basis: 66.66667%;
+  max-width: 66.66667%;
+}
+
+.c-grid--3col-sp &gt; .c-grid__col--colspan_3-sp {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--3col-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--4arrow-col</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--4arrow-col preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--4arrow-col&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--4arrow-col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+  max-width: 20%;
+}
+
+.c-grid--4arrow-col &gt; .c-grid__col:nth-child(even) {
+  -ms-flex-preferred-size: 5%;
+  flex-basis: 5%;
+  max-width: 5%;
+}
+
+.c-grid--4arrow-col &gt; .c-grid__col,
+.c-grid--4arrow-col &gt; .c-grid__col:nth-child(even) {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--4arrow-col">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--4col</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--4col preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--4col&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--4col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.c-grid--4col &gt; .c-grid__col--colspan_2 {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.c-grid--4col &gt; .c-grid__col--colspan_3 {
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+.c-grid--4col &gt; .c-grid__col--colspan_4 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--4col">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--4col-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--4col-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--4col-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--4col-sp &gt; .c-grid__col {
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.c-grid--4col-sp &gt; .c-grid__col--colspan_2-sp {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.c-grid--4col-sp &gt; .c-grid__col--colspan_3-sp {
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+.c-grid--4col-sp &gt; .c-grid__col--colspan_4-sp {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--4col-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--5arrow-col</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--5arrow-col preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--5arrow-col&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--5arrow-col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+  max-width: 16%;
+}
+
+.c-grid--5arrow-col &gt; .c-grid__col:nth-child(even) {
+  -ms-flex-preferred-size: 5%;
+  flex-basis: 5%;
+  max-width: 5%;
+}
+
+.c-grid--5arrow-col &gt; .c-grid__col,
+.c-grid--5arrow-col__2row &gt; .c-grid__col,
+.c-grid--5arrow-col &gt; .c-grid__col:nth-child(even),
+.c-grid--5arrow-col__2row &gt; .c-grid__col:nth-child(odd) {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--5arrow-col">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--5arrow-col__2row</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--5arrow-col__2row preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--5arrow-col__2row&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--5arrow-col__2row &gt; .c-grid__col {
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+  max-width: 16%;
+}
+
+.c-grid--5arrow-col__2row &gt; .c-grid__col:nth-child(odd) {
+  -ms-flex-preferred-size: 5%;
+  flex-basis: 5%;
+  max-width: 5%;
+}
+
+.c-grid--5arrow-col &gt; .c-grid__col,
+.c-grid--5arrow-col__2row &gt; .c-grid__col,
+.c-grid--5arrow-col &gt; .c-grid__col:nth-child(even),
+.c-grid--5arrow-col__2row &gt; .c-grid__col:nth-child(odd) {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--5arrow-col__2row">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--5col</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--5col preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--5col&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--5col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+  max-width: 20%;
+}
+
+.c-grid--5col &gt; .c-grid__col--colspan_2 {
+  -ms-flex-preferred-size: 40%;
+  flex-basis: 40%;
+  max-width: 40%;
+}
+
+.c-grid--5col &gt; .c-grid__col--colspan_3 {
+  -ms-flex-preferred-size: 60%;
+  flex-basis: 60%;
+  max-width: 60%;
+}
+
+.c-grid--5col &gt; .c-grid__col--colspan_4 {
+  -ms-flex-preferred-size: 80%;
+  flex-basis: 80%;
+  max-width: 80%;
+}
+
+.c-grid--5col &gt; .c-grid__col--colspan_5 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--5col">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--5col-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--5col-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--5col-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--5col-sp &gt; .c-grid__col {
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+  max-width: 20%;
+}
+
+.c-grid--5col-sp &gt; .c-grid__col--colspan_2-sp {
+  -ms-flex-preferred-size: 40%;
+  flex-basis: 40%;
+  max-width: 40%;
+}
+
+.c-grid--5col-sp &gt; .c-grid__col--colspan_3-sp {
+  -ms-flex-preferred-size: 60%;
+  flex-basis: 60%;
+  max-width: 60%;
+}
+
+.c-grid--5col-sp &gt; .c-grid__col--colspan_4-sp {
+  -ms-flex-preferred-size: 80%;
+  flex-basis: 80%;
+  max-width: 80%;
+}
+
+.c-grid--5col-sp &gt; .c-grid__col--colspan_5-sp {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--5col-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--6col</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--6col preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--6col&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--6col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 16.66667%;
+  flex-basis: 16.66667%;
+  max-width: 16.66667%;
+}
+
+.c-grid--6col &gt; .c-grid__col--colspan_2 {
+  -ms-flex-preferred-size: 33.33333%;
+  flex-basis: 33.33333%;
+  max-width: 33.33333%;
+}
+
+.c-grid--6col &gt; .c-grid__col--colspan_3 {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.c-grid--6col &gt; .c-grid__col--colspan_4 {
+  -ms-flex-preferred-size: 66.66667%;
+  flex-basis: 66.66667%;
+  max-width: 66.66667%;
+}
+
+.c-grid--6col &gt; .c-grid__col--colspan_5 {
+  -ms-flex-preferred-size: 83.33333%;
+  flex-basis: 83.33333%;
+  max-width: 83.33333%;
+}
+
+.c-grid--6col &gt; .c-grid__col--colspan_6 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--6col">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--6col-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--6col-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--6col-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--6col-sp &gt; .c-grid__col {
+  -ms-flex-preferred-size: 16.66667%;
+  flex-basis: 16.66667%;
+  max-width: 16.66667%;
+}
+
+.c-grid--6col-sp &gt; .c-grid__col--colspan_2-sp {
+  -ms-flex-preferred-size: 33.33333%;
+  flex-basis: 33.33333%;
+  max-width: 33.33333%;
+}
+
+.c-grid--6col-sp &gt; .c-grid__col--colspan_3-sp {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.c-grid--6col-sp &gt; .c-grid__col--colspan_4-sp {
+  -ms-flex-preferred-size: 66.66667%;
+  flex-basis: 66.66667%;
+  max-width: 66.66667%;
+}
+
+.c-grid--6col-sp &gt; .c-grid__col--colspan_5-sp {
+  -ms-flex-preferred-size: 83.33333%;
+  flex-basis: 83.33333%;
+  max-width: 83.33333%;
+}
+
+.c-grid--6col-sp &gt; .c-grid__col--colspan_6-sp {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--6col-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--7col</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--7col preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--7col&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--7col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 14.28571%;
+  flex-basis: 14.28571%;
+  max-width: 14.28571%;
+}
+
+.c-grid--7col &gt; .c-grid__col--colspan_2 {
+  -ms-flex-preferred-size: 28.57143%;
+  flex-basis: 28.57143%;
+  max-width: 28.57143%;
+}
+
+.c-grid--7col &gt; .c-grid__col--colspan_3 {
+  -ms-flex-preferred-size: 42.85714%;
+  flex-basis: 42.85714%;
+  max-width: 42.85714%;
+}
+
+.c-grid--7col &gt; .c-grid__col--colspan_4 {
+  -ms-flex-preferred-size: 57.14286%;
+  flex-basis: 57.14286%;
+  max-width: 57.14286%;
+}
+
+.c-grid--7col &gt; .c-grid__col--colspan_5 {
+  -ms-flex-preferred-size: 71.42857%;
+  flex-basis: 71.42857%;
+  max-width: 71.42857%;
+}
+
+.c-grid--7col &gt; .c-grid__col--colspan_6 {
+  -ms-flex-preferred-size: 85.71429%;
+  flex-basis: 85.71429%;
+  max-width: 85.71429%;
+}
+
+/* 他 1 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--7col">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--7col-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--7col-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--7col-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--7col-sp &gt; .c-grid__col {
+  -ms-flex-preferred-size: 14.28571%;
+  flex-basis: 14.28571%;
+  max-width: 14.28571%;
+}
+
+.c-grid--7col-sp &gt; .c-grid__col--colspan_2-sp {
+  -ms-flex-preferred-size: 28.57143%;
+  flex-basis: 28.57143%;
+  max-width: 28.57143%;
+}
+
+.c-grid--7col-sp &gt; .c-grid__col--colspan_3-sp {
+  -ms-flex-preferred-size: 42.85714%;
+  flex-basis: 42.85714%;
+  max-width: 42.85714%;
+}
+
+.c-grid--7col-sp &gt; .c-grid__col--colspan_4-sp {
+  -ms-flex-preferred-size: 57.14286%;
+  flex-basis: 57.14286%;
+  max-width: 57.14286%;
+}
+
+.c-grid--7col-sp &gt; .c-grid__col--colspan_5-sp {
+  -ms-flex-preferred-size: 71.42857%;
+  flex-basis: 71.42857%;
+  max-width: 71.42857%;
+}
+
+.c-grid--7col-sp &gt; .c-grid__col--colspan_6-sp {
+  -ms-flex-preferred-size: 85.71429%;
+  flex-basis: 85.71429%;
+  max-width: 85.71429%;
+}
+
+/* 他 1 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--7col-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--8col</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--8col preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--8col&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--8col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 12.5%;
+  flex-basis: 12.5%;
+  max-width: 12.5%;
+}
+
+.c-grid--8col &gt; .c-grid__col--colspan_2 {
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.c-grid--8col &gt; .c-grid__col--colspan_3 {
+  -ms-flex-preferred-size: 37.5%;
+  flex-basis: 37.5%;
+  max-width: 37.5%;
+}
+
+.c-grid--8col &gt; .c-grid__col--colspan_4 {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.c-grid--8col &gt; .c-grid__col--colspan_5 {
+  -ms-flex-preferred-size: 62.5%;
+  flex-basis: 62.5%;
+  max-width: 62.5%;
+}
+
+.c-grid--8col &gt; .c-grid__col--colspan_6 {
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+/* 他 2 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--8col">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--8col-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--8col-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--8col-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--8col-sp &gt; .c-grid__col {
+  -ms-flex-preferred-size: 12.5%;
+  flex-basis: 12.5%;
+  max-width: 12.5%;
+}
+
+.c-grid--8col-sp &gt; .c-grid__col--colspan_2-sp {
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.c-grid--8col-sp &gt; .c-grid__col--colspan_3-sp {
+  -ms-flex-preferred-size: 37.5%;
+  flex-basis: 37.5%;
+  max-width: 37.5%;
+}
+
+.c-grid--8col-sp &gt; .c-grid__col--colspan_4-sp {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.c-grid--8col-sp &gt; .c-grid__col--colspan_5-sp {
+  -ms-flex-preferred-size: 62.5%;
+  flex-basis: 62.5%;
+  max-width: 62.5%;
+}
+
+.c-grid--8col-sp &gt; .c-grid__col--colspan_6-sp {
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+/* 他 2 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--8col-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--9col</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--9col preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--9col&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--9col &gt; .c-grid__col {
+  -ms-flex-preferred-size: 11.11111%;
+  flex-basis: 11.11111%;
+  max-width: 11.11111%;
+}
+
+.c-grid--9col &gt; .c-grid__col--colspan_2 {
+  -ms-flex-preferred-size: 22.22222%;
+  flex-basis: 22.22222%;
+  max-width: 22.22222%;
+}
+
+.c-grid--9col &gt; .c-grid__col--colspan_3 {
+  -ms-flex-preferred-size: 33.33333%;
+  flex-basis: 33.33333%;
+  max-width: 33.33333%;
+}
+
+.c-grid--9col &gt; .c-grid__col--colspan_4 {
+  -ms-flex-preferred-size: 44.44444%;
+  flex-basis: 44.44444%;
+  max-width: 44.44444%;
+}
+
+.c-grid--9col &gt; .c-grid__col--colspan_5 {
+  -ms-flex-preferred-size: 55.55556%;
+  flex-basis: 55.55556%;
+  max-width: 55.55556%;
+}
+
+.c-grid--9col &gt; .c-grid__col--colspan_6 {
+  -ms-flex-preferred-size: 66.66667%;
+  flex-basis: 66.66667%;
+  max-width: 66.66667%;
+}
+
+/* 他 3 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--9col">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--9col-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--9col-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--9col-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--9col-sp &gt; .c-grid__col {
+  -ms-flex-preferred-size: 11.11111%;
+  flex-basis: 11.11111%;
+  max-width: 11.11111%;
+}
+
+.c-grid--9col-sp &gt; .c-grid__col--colspan_2-sp {
+  -ms-flex-preferred-size: 22.22222%;
+  flex-basis: 22.22222%;
+  max-width: 22.22222%;
+}
+
+.c-grid--9col-sp &gt; .c-grid__col--colspan_3-sp {
+  -ms-flex-preferred-size: 33.33333%;
+  flex-basis: 33.33333%;
+  max-width: 33.33333%;
+}
+
+.c-grid--9col-sp &gt; .c-grid__col--colspan_4-sp {
+  -ms-flex-preferred-size: 44.44444%;
+  flex-basis: 44.44444%;
+  max-width: 44.44444%;
+}
+
+.c-grid--9col-sp &gt; .c-grid__col--colspan_5-sp {
+  -ms-flex-preferred-size: 55.55556%;
+  flex-basis: 55.55556%;
+  max-width: 55.55556%;
+}
+
+.c-grid--9col-sp &gt; .c-grid__col--colspan_6-sp {
+  -ms-flex-preferred-size: 66.66667%;
+  flex-basis: 66.66667%;
+  max-width: 66.66667%;
+}
+
+/* 他 3 件の関連ルール */</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--9col-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--int10</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--int10 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--int10&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--int10 {
+  margin-right: -10px;
+}
+
+.c-grid--int10 &gt; .c-grid__col {
+  padding-right: 10px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--int10">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--int10-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--int10-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--int10-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--int10-sp {
+  margin-right: -10px;
+}
+
+.c-grid--int10-sp &gt; .c-grid__col {
+  padding-right: 10px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--int10-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--int16</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--int16 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--int16&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--int16 {
+  margin-right: -16px;
+}
+
+.c-grid--int16 &gt; .c-grid__col {
+  padding-right: 16px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--int16">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--int16-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--int16-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--int16-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--int16-sp {
+  margin-right: -16px;
+}
+
+.c-grid--int16-sp &gt; .c-grid__col {
+  padding-right: 16px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--int16-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--int20</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--int20 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--int20&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--int20 {
+  margin-right: -20px;
+}
+
+.c-grid--int20 &gt; .c-grid__col {
+  padding-right: 20px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--int20">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--int20-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--int20-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--int20-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--int20-sp {
+  margin-right: -20px;
+}
+
+.c-grid--int20-sp &gt; .c-grid__col {
+  padding-right: 20px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--int20-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--int24</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--int24 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--int24&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--int24 {
+  margin-right: -24px;
+}
+
+.c-grid--int24 &gt; .c-grid__col {
+  padding-right: 24px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--int24">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--int24-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--int24-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--int24-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--int24-sp {
+  margin-right: -24px;
+}
+
+.c-grid--int24-sp &gt; .c-grid__col {
+  padding-right: 24px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--int24-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--int30</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--int30 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--int30&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--int30 {
+  margin-right: -30px;
+}
+
+.c-grid--int30 &gt; .c-grid__col {
+  padding-right: 30px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--int30">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--int30-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--int30-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--int30-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--int30-sp {
+  margin-right: -30px;
+}
+
+.c-grid--int30-sp &gt; .c-grid__col {
+  padding-right: 30px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--int30-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--int32</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--int32 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--int32&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--int32 {
+  margin-right: -32px;
+}
+
+.c-grid--int32 &gt; .c-grid__col {
+  padding-right: 32px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--int32">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--int32-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--int32-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--int32-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--int32-sp {
+  margin-right: -32px;
+}
+
+.c-grid--int32-sp &gt; .c-grid__col {
+  padding-right: 32px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--int32-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--int40</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--int40 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--int40&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--int40 {
+  margin-right: -40px;
+}
+
+.c-grid--int40 &gt; .c-grid__col {
+  padding-right: 40px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--int40">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--int40-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--int40-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--int40-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--int40-sp {
+  margin-right: -40px;
+}
+
+.c-grid--int40-sp &gt; .c-grid__col {
+  padding-right: 40px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--int40-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--int8</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--int8 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--int8&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--int8 {
+  margin-right: -8px;
+}
+
+.c-grid--int8 &gt; .c-grid__col {
+  padding-right: 8px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--int8">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--int8-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--int8-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--int8-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--int8-sp {
+  margin-right: -8px;
+}
+
+.c-grid--int8-sp &gt; .c-grid__col {
+  padding-right: 8px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--int8-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--j-center</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--j-center preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--j-center&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--j-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--j-center">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--j-center-sp</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--j-center-sp preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--j-center-sp&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--j-center-sp {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--j-center-sp">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--pc_only</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--pc_only preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--pc_only&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--pc_only {
+  display: block;
+  margin-right: 0;
+}
+
+.c-grid--pc_only &gt; .c-grid__col {
+  max-width: none;
+  padding-right: 0;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--pc_only">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--reverse</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--reverse preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--reverse&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--reverse {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-grid--reverse .c-grid__col {
+  flex-basis:auto;
+}
+
+.c-grid--reverse .c-grid__col:first-child {
+  order: 2;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--reverse">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-grid--v-center</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-grid--v-center preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-grid--v-center&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-grid--v-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-grid--v-center">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-section</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-section preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-section&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-section {
+  margin-bottom: 90px;
+}
+
+.c-section {
+  margin-bottom: 80px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-section">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-section__inner</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-section__inner preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-section__inner&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-section__inner {
+  margin-bottom: 56px;
+}
+
+.c-section__inner {
+  margin-bottom: 48px;
+}
+
+.m-voice &gt; .c-section__inner:last-of-type {
+  margin-bottom: 10px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-section__inner">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-section--h2</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-section--h2 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-section--h2&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-section--h2 {
+  margin-bottom: 90px;
+}
+
+.c-section--h2 {
+  margin-bottom: 80px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-section--h2">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-section--h3</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-section--h3 preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-section--h3&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-section--h3 {
+  margin-bottom: 72px;
+}
+
+.c-section--h3 {
+  margin-bottom: 64px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-section--h3">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-unit</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-unit preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-unit&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.l-content--top .c-unit {
+  padding: 56px 0 64px;
+}
+
+.l-content--top .c-unit {
+  padding: 48px 0 56px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-unit">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-unit__inner</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-unit__inner preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-unit__inner&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-unit__inner {
+  margin: 0 auto;
+}
+
+.l-content--top .c-unit__inner {
+  max-width: 988px;
+}
+
+.c-unit__inner {
+  padding: 0 16px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-unit__inner">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-unit--alert</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-unit--alert preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-unit--alert&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-unit--alert {
+  background-color: #FCF5F4;
+  padding: 8px 20px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-unit--alert">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-unit--blue</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-unit--blue preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-unit--blue&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-unit--blue {
+  background-color: #1F5FA8;
+  background-image: linear-gradient(135deg, #3b9ddd 0%, #1F5FA8 100%);
+  color: #fff;
+  padding: 56px 0 64px;
+}
+
+.c-unit--blue {
+  padding: 48px 0 56px;
+}
+
+.c-unit--blue .e-txt,
+.c-unit--blue .e-txt--lead,
+.c-unit--blue .e-txt--low {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.c-unit--blue .e-link--arrow,
+.c-unit--blue .e-link--arrow-navi,
+.c-unit--blue .e-link--anchor {
+  color: #fff;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-unit--blue">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>
+
+<template>
+<div class="css-class-reference">
+  <p class="css-class-reference__name"><code>.c-unit--gray</code></p>
+  <div class="css-class-reference__demo">
+  <iframe class="css-class-reference__frame" title=".c-unit--gray preview" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;ja&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/common/css/common.css&quot;&gt;&lt;style&gt;html, body { margin: 0; min-height: 100%; background: #fff; }body { box-sizing: border-box; padding: 12px; color: #1f2328; font: 16px/1.6 sans-serif; }img { max-width: 100%; height: auto; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;c-unit--gray&quot;&gt;これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </div>
+  <pre class="css-class-reference__rule"><code>.c-unit--gray {
+  background-color: #F6F6F6;
+  padding: 56px 0 64px;
+}
+
+.c-unit--gray {
+  padding: 48px 0 56px;
+}</code></pre>
+</div>
+<script type="text/plain" data-element-copy>
+<div class="c-unit--gray">これは折り返し表示を確認するためのサンプルテキストです。日本語の文章が複数行になった場合の余白、幅、行間、文字サイズ、配置の見え方を確認できます。ボタンやリンクの中でも読みやすさを比較できます。</div>
+</script>
+</template>

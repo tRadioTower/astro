@@ -1,5 +1,7 @@
 ---
-const { title = "エレメントリスト" } = Astro.props;
+import "../styles/element-list.css";
+
+const { title = "エレメントリスト", showSearch = true } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,18 +23,20 @@ const { title = "エレメントリスト" } = Astro.props;
       <header class="element-list__header">
         <div class="element-list__header-inner">
           <h1 class="element-list__title">{title}</h1>
-          <div class="element-list__tools">
-            <input
-              class="element-list__search"
-              type="search"
-              placeholder="タイトル・HTMLで検索"
-              aria-label="エレメントを検索"
-              data-element-search
-            />
-          </div>
+          {showSearch && (
+            <div class="element-list__tools">
+              <input
+                class="element-list__search"
+                type="search"
+                placeholder="タイトル・HTMLで検索"
+                aria-label="エレメントを検索"
+                data-element-search
+              />
+            </div>
+          )}
         </div>
       </header>
-      <p class="element-list__empty" data-element-empty hidden>該当するエレメントはありません。</p>
+      {showSearch && <p class="element-list__empty" data-element-empty hidden>該当するエレメントはありません。</p>}
       <div class="element-list__body">
         <slot />
       </div>
@@ -89,14 +93,15 @@ const { title = "エレメントリスト" } = Astro.props;
 
         navItems.forEach((item) => {
           const target = document.getElementById(item.dataset.navTarget || "");
-          item.hidden = Boolean(target?.hidden);
+          item.hidden = target ? Boolean(target.hidden) : Boolean(query);
         });
 
         navGroups.forEach((group) => {
           const visibleItems = group.querySelectorAll("[data-element-nav-item]:not([hidden])");
           const hasVisibleItems = visibleItems.length > 0;
+          const isCurrent = group.dataset.navCurrent === "true";
           group.hidden = !hasVisibleItems;
-          group.open = Boolean(query && hasVisibleItems);
+          group.open = Boolean((query && hasVisibleItems) || (!query && isCurrent));
         });
 
         if (emptyMessage) {

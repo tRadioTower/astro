@@ -1,6 +1,6 @@
 <!--
   category: 基本要素
-  usage: Add one template block per element. The template content is the copy target.
+  usage: Add one template block per element. Preview HTML goes in template, copy HTML goes in data-element-copy.
 -->
 
 <template>
@@ -8,6 +8,9 @@
                   <div class="m-lead">
                     <p class="e-txt--lead">あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30（リード文）</p>
                   </div><!-- /.m-lead -->
+<script type="text/plain" data-element-copy>
+<p class="e-txt--lead">あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30（リード文）</p>
+</script>
 </template>
 
 <template>
@@ -20,10 +23,24 @@
                     H2見出しテキストH2見出しテキストH2見出しテキスト<br>
                     H2見出しテキスト
                   </h2>
+<script type="text/plain" data-element-copy>
+<h2 class="e-h2--element"># 見出し</h2>
+                  <h1 class="e-h1">H1見出しテキスト</h1>
+                  <h1 class="e-h1">H1見出し（リリース系など）</h1>
+                  <p class="u-right">2017年12月31日</p>
+                  <h2 class="e-h2">H2見出しテキストH2見出しテキスト</h2>
+                  <h2 class="e-h2">
+                    H2見出しテキストH2見出しテキストH2見出しテキスト<br>
+                    H2見出しテキスト
+                  </h2>
+</script>
 </template>
 
 <template>
 <h3 class="e-h3">H3見出しテキストH3見出しテキスト</h3>
+<script type="text/plain" data-element-copy>
+<h3 class="e-h3">H3見出しテキストH3見出しテキスト</h3>
+</script>
 </template>
 
 <template>
@@ -33,6 +50,14 @@
                   </h3>
                   <h4 class="e-h4">H4見出しテキストH4見出しテキスト</h4>
                   <h5 class="e-h5">H5見出しテキストH5見出しテキスト</h5>
+<script type="text/plain" data-element-copy>
+<h3 class="e-h3--icon">
+                    <img src="https://www.lawsonbank.jp/common/images/img_icon_24.png" alt="" class="e-h3--icon__icon">
+                    H3見出しテキスト（アイコン付き）
+                  </h3>
+                  <h4 class="e-h4">H4見出しテキストH4見出しテキスト</h4>
+                  <h5 class="e-h5">H5見出しテキストH5見出しテキスト</h5>
+</script>
 </template>
 
 <template>
@@ -49,6 +74,21 @@
               </section><!-- /.c-section--h2 -->
             </div><!-- /.c-unit__inner -->
           </div><!-- /.c-unit -->
+<script type="text/plain" data-element-copy>
+<div class="c-unit">
+            <div class="c-unit__inner">
+              <h2 class="e-h2--element" id="txt"># 本文</h2>
+              <section class="c-section--h2">
+                <div class="c-section__inner">
+                  <p class="e-txt"><strong>キャッチコピーや注意事項など、重要なテキストは&lt;strong&gt;&lt;/strong&gt;を使用します。</strong></p>
+                  <p class="e-txt u-font--bold">見出しなど、見た目的に強調したい部分にはクラス.u-font--boldを適用します。判断に迷った場合はこちらを使用してください。</p>
+                  <p class="e-txt">あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30</p>
+                  <p class="e-txt--low">あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30</p>
+                </div><!-- /.c-section__inner -->
+              </section><!-- /.c-section--h2 -->
+            </div><!-- /.c-unit__inner -->
+          </div><!-- /.c-unit -->
+</script>
 </template>
 
 <template>
@@ -83,6 +123,39 @@
                     </ul>
                   </div><!-- /.c-section__inner -->
                 </section><!-- /.c-section--h3 -->
+<script type="text/plain" data-element-copy>
+<section class="c-section--h3">
+                  <h3 class="e-h3" id="list">番号なしリスト</h3>
+                  <div class="c-section__inner">
+                    <ul class="e-list">
+                      <li>番号なしリスト番号なしリスト番号なしリスト番号なしリスト番号なしリスト番号なしリスト番号なしリスト番号なしリスト
+                        <ul class="e-list--lv2">
+                          <li>番号なし子リスト番号なし子リスト番号なし子リスト番号なし子リスト番号なし子リスト番号なし子リスト番号なし子リスト番号なし子リスト</li>
+                          <li>番号なし子リスト番号なし子リスト番号なし子リスト番号なし子リスト</li>
+                          <li>番号なし子リスト番号なし子リスト番号なし子リスト番号なし子リスト</li>
+                        </ul>
+                      </li>
+                      <li>
+                        番号なしリスト番号なしリスト番号なしリスト番号なしリスト番号なしリスト番号なしリスト番号なしリスト番号なしリスト番号なしリスト番号なしリスト番号なしリスト番号なしリスト
+                        <ul class="e-list--lv2">
+                          <li>番号なし子リスト番号なし子リスト番号なし子リスト番号なし子リスト
+                            <ul class="e-list--lv3">
+                              <li>番号なし孫リスト番号なし孫リスト番号なし孫リスト番号なし孫リスト</li>
+                              <li>番号なし孫リスト番号なし孫リスト番号なし孫リスト番号なし孫リスト</li>
+                              <li>番号なし孫リスト番号なし孫リスト番号なし孫リスト番号なし孫リスト番号なし孫リスト番号なし孫リスト番号なし孫リスト番号なし孫リスト番号なし孫リスト番号なし孫リスト番号なし孫リスト番号なし孫リスト番号なし孫リスト番号なし孫リスト番号なし孫リスト番号なし孫リスト</li>
+                              <li>番号なし孫リスト番号なし孫リスト番号なし孫リスト番号なし孫リスト</li>
+                              <li>番号なし孫リスト番号なし孫リスト番号なし孫リスト番号なし孫リスト</li>
+                            </ul>
+                          </li>
+                          <li>番号なし子リスト番号なし子リスト番号なし子リスト番号なし子リスト番号なし子リスト番号なし子リスト番号なし子リスト番号なし子リスト番号なし子リスト番号なし子リスト番号なし子リスト番号なし子リスト</li>
+                        </ul>
+                      </li>
+                      <li>番号なしリスト番号なしリスト番号なしリスト番号なしリスト</li>
+                      <li>番号なしリスト番号なしリスト番号なしリスト番号なしリスト</li>
+                    </ul>
+                  </div><!-- /.c-section__inner -->
+                </section><!-- /.c-section--h3 -->
+</script>
 </template>
 
 <template>
@@ -97,6 +170,19 @@
                     </ul>
                   </div><!-- /.c-section__inner -->
                 </section><!-- /.c-section--h3 -->
+<script type="text/plain" data-element-copy>
+<section class="c-section--h3">
+                  <h3 class="e-h3">注釈リスト</h3>
+                  <div class="c-section__inner">
+                    <ul class="e-list--notes">
+                      <li>番号なし注釈リスト番号なし注釈リスト番号なし注釈リスト番号なし注釈リスト</li>
+                      <li>番号なし注釈リスト番号なし注釈リスト番号なし注釈リスト番号なし注釈リスト番号なし注釈リスト番号なし注釈リスト番号なし注釈リスト番号なし注釈リスト番号なし注釈リスト番号なし注釈リスト</li>
+                      <li>番号なし注釈リスト番号なし注釈リスト番号なし注釈リスト番号なし注釈リスト</li>
+                      <li class="u-c--red">番号なし注釈リスト（赤文字）番号なし注釈リスト番号なし注釈リスト番号なし注釈リスト</li>
+                    </ul>
+                  </div><!-- /.c-section__inner -->
+                </section><!-- /.c-section--h3 -->
+</script>
 </template>
 
 <template>
@@ -174,6 +260,82 @@
 
                   </div><!-- /.c-section__inner -->
                 </section><!-- /.c-section--h3 -->
+<script type="text/plain" data-element-copy>
+<section class="c-section--h3">
+                  <h3 class="e-h3" id="order">番号ありリスト</h3>
+                  <div class="c-section__inner">
+                    <ol class="e-order">
+                      <li>番号ありリスト番号ありリスト番号ありリスト番号ありリスト
+                        <ul class="e-order--lv2">
+                          <li>番号あり子リスト番号あり子リスト番号あり子リスト番号あり子リスト
+                            <ul class="e-order--lv3">
+                              <li>番号あり孫リスト番号あり孫リスト番号あり孫リスト番号あり孫リスト</li>
+                              <li>番号あり孫リスト番号あり孫リスト番号あり孫リスト番号あり孫リスト</li>
+                              <li>番号あり孫リスト番号あり孫リスト番号あり孫リスト番号あり孫リスト番号あり孫リスト番号あり孫リスト番号あり孫リスト番号あり孫リスト</li>
+                              <li>番号あり孫リスト番号あり孫リスト番号あり孫リスト番号あり孫リスト</li>
+                              <li>番号あり孫リスト番号あり孫リスト番号あり孫リスト番号あり孫リスト</li>
+                            </ul>
+                          </li>
+                          <li>番号あり子リスト番号あり子リスト番号あり子リスト番号あり子リスト番号あり子リスト番号あり子リスト番号あり子リスト番号あり子リスト番号あり子リスト番号あり子リスト番号あり子リスト番号あり子リスト</li>
+                        </ul>
+                      </li>
+                      <li>番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                      <li>番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                      <li>番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                    </ol>
+                  </div><!-- /.c-section__inner -->
+                  <div class="c-section__inner">
+                    <p class="e-txt">
+                      途中から連番を振る場合は&lt;ol class="e-order" start="2"&gt;のように始まる値でstart属性を入れてください。
+                    </p>
+                    <ol class="e-order" start="2">
+                      <li>2から始まる番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                      <li>番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                    </ol>
+
+                    <ol class="e-order" start="3">
+                      <li>3から始まる番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                      <li>番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                    </ol>
+
+                    <ol class="e-order" start="4">
+                      <li>4から始まる番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                      <li>番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                    </ol>
+
+                    <ol class="e-order" start="5">
+                      <li>5から始まる番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                      <li>番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                    </ol>
+
+                    <ol class="e-order" start="6">
+                      <li>6から始まる番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                      <li>番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                    </ol>
+
+                    <ol class="e-order" start="7">
+                      <li>7から始まる番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                      <li>番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                    </ol>
+
+                    <ol class="e-order" start="8">
+                      <li>8から始まる番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                      <li>番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                    </ol>
+
+                    <ol class="e-order" start="9">
+                      <li>9から始まる番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                      <li>番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                    </ol>
+
+                    <ol class="e-order" start="10">
+                      <li>10から始まる番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                      <li>番号ありリスト番号ありリスト番号ありリスト番号ありリスト</li>
+                    </ol>
+
+                  </div><!-- /.c-section__inner -->
+                </section><!-- /.c-section--h3 -->
+</script>
 </template>
 
 <template>
@@ -238,6 +400,69 @@
 
                   </div><!-- /.c-section__inner -->
                 </section><!-- /.c-section--h3 -->
+<script type="text/plain" data-element-copy>
+<section class="c-section--h3">
+                  <h3 class="e-h3">番号あり注釈リスト</h3>
+                  <div class="c-section__inner">
+                    <ol class="e-order--notes">
+                      <li>番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                      <li>番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                      <li>番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                      <li>番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                    </ol>
+                  </div><!-- /.c-section__inner -->
+                  <div class="c-section__inner">
+                    <p class="e-txt">
+                      途中から連番を振る場合は&lt;ol class="e-order--notes" start="2"&gt;のように始まる値でstart属性を入れてください。
+                    </p>
+                    <ol class="e-order--notes" start="2">
+                      <li>注2から始まる番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                      <li>番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                    </ol>
+
+                    <ol class="e-order--notes" start="3">
+                      <li>注3から始まる番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                      <li>番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                    </ol>
+
+                    <ol class="e-order--notes" start="4">
+                      <li>注4から始まる番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                      <li>番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                    </ol>
+
+                    <ol class="e-order--notes" start="5">
+                      <li>注5から始まる番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                      <li>番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                    </ol>
+
+                    <ol class="e-order--notes" start="6">
+                      <li>注6から始まる番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                      <li>番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                    </ol>
+
+                    <ol class="e-order--notes" start="7">
+                      <li>注7から始まる番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                      <li>番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                    </ol>
+
+                    <ol class="e-order--notes" start="8">
+                      <li>注8から始まる番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                      <li>番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                    </ol>
+
+                    <ol class="e-order--notes" start="9">
+                      <li>注9から始まる番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                      <li>番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                    </ol>
+
+                    <ol class="e-order--notes" start="10">
+                      <li>注10から始まる番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                      <li>番号あり注釈リスト番号あり注釈リスト番号あり注釈リスト</li>
+                    </ol>
+
+                  </div><!-- /.c-section__inner -->
+                </section><!-- /.c-section--h3 -->
+</script>
 </template>
 
 <template>
@@ -364,76 +589,259 @@
                   </section><!-- /.c-section--h4 -->
 
                 </section><!-- /.c-section--h3 -->
+<script type="text/plain" data-element-copy>
+<section class="c-section--h3">
+                  <h3 class="e-h3" id="list-img">画像ビュレットリスト</h3>
+                  <section class="c-section--h4">
+                    <h4 class="e-h4" id="list-img-ul">ul要素</h4>
+                    <div class="c-section__inner">
+                      <ul class="e-list-img">
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_alert.png" alt="ご注意ください"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_r_alert.png" alt="ご注意ください"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                      </ul>
+                    </div><!-- /.c-section__inner -->
+                  </section><!-- /.c-section--h4 -->
+
+                  <section class="c-section--h4">
+                    <h4 class="e-h4" id="list-img-ol">ol要素</h4>
+                    <div class="c-section__inner">
+                      <ol class="e-list-img">
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_01.png" alt="1"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_02.png" alt="2"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_03.png" alt="3"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_04.png" alt="4"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_05.png" alt="5"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_06.png" alt="6"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_07.png" alt="7"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_08.png" alt="8"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_09.png" alt="9"></span>
+                          他の利用者の方が行った取引について、<img src="https://www.lawsonbank.jp/common/images/img_num_01.png" alt="1" class="e-icon">で登録する方に承認・取消を行う権限を付与するかをご選択ください。
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_10.png" alt="10"></span>
+                          <img src="https://www.lawsonbank.jp/common/images/img_num_02.png" alt="2" class="e-icon--first">で「ご依頼人名の後につける」または「ご依頼人名の先につける」をご選択された場合、付加情報欄にご入力ください。
+                        </li>
+                      </ol>
+                      <ol class="e-list-img">
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_r_01.png" alt="1"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_r_02.png" alt="2"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_r_03.png" alt="3"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_r_04.png" alt="4"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_r_05.png" alt="5"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_r_06.png" alt="6"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_r_07.png" alt="7"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_r_08.png" alt="8"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_r_09.png" alt="9"></span>
+                          他の利用者の方が行った取引について、<img src="https://www.lawsonbank.jp/common/images/img_num_r_01.png" alt="1" class="e-icon">で登録する方に承認・取消を行う権限を付与するかをご選択ください。
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_r_10.png" alt="10"></span>
+                          <img src="https://www.lawsonbank.jp/common/images/img_num_r_02.png" alt="2" class="e-icon--first">で「ご依頼人名の後につける」または「ご依頼人名の先につける」をご選択された場合、付加情報欄にご入力ください。
+                        </li>
+                      </ol>
+
+                      <p class="e-txt">
+                        途中から連番を振る場合は&lt;ol class="e-order-img" start="2"&gt;のように始まる値でstart属性を入れてください。間違えた場合道場の類似エレメントと異なり、ブラウザ上でエラーが見えないので忘れないようにしてください。
+                      </p>
+                      <ol class="e-list-img" start="2">
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_02.png" alt="2"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                        <li>
+                          <span class="e-list-img__icon"><img src="https://www.lawsonbank.jp/common/images/img_num_03.png" alt="3"></span>
+                          画像ビュレットリスト画像ビュレットリスト画像ビュレットリスト
+                        </li>
+                      </ol>
+                    </div><!-- /.c-section__inner -->
+                  </section><!-- /.c-section--h4 -->
+
+                </section><!-- /.c-section--h3 -->
+</script>
 </template>
 
-<template data-title="本文内リンク（同タブ）（長文）" data-id="本文内リンク-同タブ-長文">
+<template>
 <p class="e-txt">
                     通常テキストが入ります通常テキストが入ります<a href="#DUMMY" class="e-link--txt">本文内リンク</a>通常テキストが入ります通常テキストが入ります
                   </p>
+<script type="text/plain" data-element-copy>
+<p class="e-txt">
+                    通常テキストが入ります通常テキストが入ります<a href="#DUMMY" class="e-link--txt">本文内リンク</a>通常テキストが入ります通常テキストが入ります
+                  </p>
+</script>
 </template>
 
-<template data-title="本文内リンク（別タブ）（長文）" data-id="本文内リンク-別タブ-長文">
+<template>
 <p class="e-txt">
                     通常テキストが入ります通常テキストが入ります<a href="#DUMMY" target="_blank" class="e-link--txt">本文内外部リンク<img class="e-link__icon" src="https://www.lawsonbank.jp/common/images/img_icon_ex.png" alt="新規ウィンドウで開きます"></a>通常テキストが入ります通常テキストが入ります
                   </p>
+<script type="text/plain" data-element-copy>
+<p class="e-txt">
+                    通常テキストが入ります通常テキストが入ります<a href="#DUMMY" target="_blank" class="e-link--txt">本文内外部リンク<img class="e-link__icon" src="https://www.lawsonbank.jp/common/images/img_icon_ex.png" alt="新規ウィンドウで開きます"></a>通常テキストが入ります通常テキストが入ります
+                  </p>
+</script>
 </template>
 
-<template data-title="リンク（同タブ）" data-id="リンク-同タブ">
+<template>
 <li>
                       <a href="#DUMMY" class="e-link--arrow">ページ遷移</a>
                     </li>
+<script type="text/plain" data-element-copy>
+<li>
+                      <a href="#DUMMY" class="e-link--arrow">ページ遷移</a>
+                    </li>
+</script>
 </template>
 
-<template data-title="リンク（同タブ）（長文）" data-id="リンク-同タブ-長文">
+<template>
 <li>
                       <a href="#DUMMY" class="e-link--arrow">ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移</a>
                     </li>
+<script type="text/plain" data-element-copy>
+<li>
+                      <a href="#DUMMY" class="e-link--arrow">ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移ページ遷移</a>
+                    </li>
+</script>
 </template>
 
-<template data-title="リンク（別タブ）" data-id="リンク-別タブ">
+<template>
 <li>
                       <a href="#DUMMY" class="e-link--arrow" target="_blank">外部リンク<img class="e-link__icon" src="https://www.lawsonbank.jp/common/images/img_icon_ex.png" alt="新規ウィンドウで開きます"></a>
                     </li>
+<script type="text/plain" data-element-copy>
+<li>
+                      <a href="#DUMMY" class="e-link--arrow" target="_blank">外部リンク<img class="e-link__icon" src="https://www.lawsonbank.jp/common/images/img_icon_ex.png" alt="新規ウィンドウで開きます"></a>
+                    </li>
+</script>
 </template>
 
-<template data-title="PDFリンク" data-id="pdfリンク">
+<template>
 <li>
                       <a href="#DUMMY" class="e-link--arrow" target="_blank">スーパー定期預金概要説明書（pdf形式:xxxxMB）<img class="e-link__icon" src="https://www.lawsonbank.jp/common/images/img_icon_pdf.png" alt="PDFファイルを新規ウィンドウで開きます"></a>
                     </li>
+<script type="text/plain" data-element-copy>
+<li>
+                      <a href="#DUMMY" class="e-link--arrow" target="_blank">スーパー定期預金概要説明書（pdf形式:xxxxMB）<img class="e-link__icon" src="https://www.lawsonbank.jp/common/images/img_icon_pdf.png" alt="PDFファイルを新規ウィンドウで開きます"></a>
+                    </li>
+</script>
 </template>
 
-<template data-title="PDFリンク（長文）" data-id="pdfリンク-長文">
+<template>
 <li>
                       <a href="#DUMMY" class="e-link--arrow" target="_blank">スーパー定期預金概要説明書（pdf形式:xxxxMB）スーパー定期預金概要説明書（pdf形式:xxxxMB）スーパー定期預金概要説明書（pdf形式:xxxxMB）スーパー定期預金概要説明書（pdf形式:xxxxMB）スーパー定期預金概要説明書（pdf形式:xxxxMB）<img class="e-link__icon" src="https://www.lawsonbank.jp/common/images/img_icon_pdf.png" alt="PDFファイルを新規ウィンドウで開きます"></a>
                     </li>
+<script type="text/plain" data-element-copy>
+<li>
+                      <a href="#DUMMY" class="e-link--arrow" target="_blank">スーパー定期預金概要説明書（pdf形式:xxxxMB）スーパー定期預金概要説明書（pdf形式:xxxxMB）スーパー定期預金概要説明書（pdf形式:xxxxMB）スーパー定期預金概要説明書（pdf形式:xxxxMB）スーパー定期預金概要説明書（pdf形式:xxxxMB）<img class="e-link__icon" src="https://www.lawsonbank.jp/common/images/img_icon_pdf.png" alt="PDFファイルを新規ウィンドウで開きます"></a>
+                    </li>
+</script>
 </template>
 
-<template data-title="ZIPダウンロードリンク" data-id="zipダウンロードリンク">
+<template>
 <li>
                       <a href="#DUMMY" class="e-link--arrow">全ファイル一括ダウンロード（zip形式:xxxxMB）<img class="e-link__icon" src="https://www.lawsonbank.jp/common/images/img_icon_zip.png" alt="ファイルをダウンロードします"></a>
                     </li>
+<script type="text/plain" data-element-copy>
+<li>
+                      <a href="#DUMMY" class="e-link--arrow">全ファイル一括ダウンロード（zip形式:xxxxMB）<img class="e-link__icon" src="https://www.lawsonbank.jp/common/images/img_icon_zip.png" alt="ファイルをダウンロードします"></a>
+                    </li>
+</script>
 </template>
 
-<template data-title="ページ内リンク" data-id="ページ内リンク">
+<template>
 <li>
                       <a href="#anc01" class="e-link--anchor">ページ内リンク（小）</a>
                     </li>
+<script type="text/plain" data-element-copy>
+<li>
+                      <a href="#anc01" class="e-link--anchor">ページ内リンク（小）</a>
+                    </li>
+</script>
 </template>
 
-<template data-title="リンク（同タブ） 2" data-id="リンク-同タブ-2">
+<template>
 <li>
                       <a href="#DUMMY" class="e-link--arrow">ページ遷移</a>
                     </li>
-</template>
-
-<template data-title="リンク（同タブ） 3" data-id="リンク-同タブ-3">
+<script type="text/plain" data-element-copy>
 <li>
                       <a href="#DUMMY" class="e-link--arrow">ページ遷移</a>
                     </li>
+</script>
 </template>
 
-<template data-title="アラートリンク" data-id="alert-link">
+<template>
+<li>
+                      <a href="#DUMMY" class="e-link--arrow">ページ遷移</a>
+                    </li>
+<script type="text/plain" data-element-copy>
+<li>
+                      <a href="#DUMMY" class="e-link--arrow">ページ遷移</a>
+                    </li>
+</script>
+</template>
+
+<template>
 <a href="#DUMMY" class="e-link--alert">年末年始のご利用案内はこちら</a>
+<script type="text/plain" data-element-copy>
+<a href="#DUMMY" class="e-link--alert">年末年始のご利用案内はこちら</a>
+</script>
 </template>
 
 <template>
@@ -449,52 +857,102 @@
               </section><!-- /.c-section--h2 -->
             </div><!-- /.c-unit__inner -->
           </div><!-- /.c-unit -->
+<script type="text/plain" data-element-copy>
+<div class="c-unit">
+            <div class="c-unit__inner">
+              <section class="c-section--h2">
+                <h2 class="e-h2--element" id="icon"># Icon</h2>
+                <div class="c-section__inner">
+                  <p class="e-txt">
+                    電子パンフレットアイコン<img src="https://www.lawsonbank.jp/common/images/img_icon_20.png" alt="電子パンフレット" class="e-icon">より、各社商品をご確認いただけます。お好きなパッケージツアーをお選びください。
+                  </p>
+                </div><!-- /.c-section__inner -->
+              </section><!-- /.c-section--h2 -->
+            </div><!-- /.c-unit__inner -->
+          </div><!-- /.c-unit -->
+</script>
 </template>
 
-<template data-title="Tag - Tag" data-id="tag-tag">
+<template>
 <li class="e-tag__item--bdr"><img src="https://www.lawsonbank.jp/common/images/img_tag_ic.png" alt="IC対応"></li>
+<script type="text/plain" data-element-copy>
+<li class="e-tag__item--bdr"><img src="https://www.lawsonbank.jp/common/images/img_tag_ic.png" alt="IC対応"></li>
+</script>
 </template>
 
-<template data-title="Tag - Tag 2" data-id="tag-tag-2">
+<template>
 <li class="e-tag__item--bdr"><img src="https://www.lawsonbank.jp/common/images/img_tag_fees.png" alt="手数料無料"></li>
+<script type="text/plain" data-element-copy>
+<li class="e-tag__item--bdr"><img src="https://www.lawsonbank.jp/common/images/img_tag_fees.png" alt="手数料無料"></li>
+</script>
 </template>
 
-<template data-title="Tag - Tag 3" data-id="tag-tag-3">
+<template>
 <li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_withdrawal.png" alt="お引出し"></li>
+<script type="text/plain" data-element-copy>
+<li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_withdrawal.png" alt="お引出し"></li>
+</script>
 </template>
 
-<template data-title="Tag - Tag 4" data-id="tag-tag-4">
+<template>
 <li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_deposit.png" alt="お預入れ"></li>
+<script type="text/plain" data-element-copy>
+<li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_deposit.png" alt="お預入れ"></li>
+</script>
 </template>
 
-<template data-title="Tag - Tag 5" data-id="tag-tag-5">
+<template>
 <li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_transfer.png" alt="お振込み"></li>
+<script type="text/plain" data-element-copy>
+<li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_transfer.png" alt="お振込み"></li>
+</script>
 </template>
 
-<template data-title="Tag - Tag 6" data-id="tag-tag-6">
+<template>
 <li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_cardloan.png" alt="カードローン"></li>
+<script type="text/plain" data-element-copy>
+<li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_cardloan.png" alt="カードローン"></li>
+</script>
 </template>
 
-<template data-title="Tag - Tag 7" data-id="tag-tag-7">
+<template>
 <li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_balance_reference.png" alt="残高照会"></li>
+<script type="text/plain" data-element-copy>
+<li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_balance_reference.png" alt="残高照会"></li>
+</script>
 </template>
 
-<template data-title="Tag - Tag 8" data-id="tag-tag-8">
+<template>
 <li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_change_pin.png" alt="暗証番号変更"></li>
+<script type="text/plain" data-element-copy>
+<li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_change_pin.png" alt="暗証番号変更"></li>
+</script>
 </template>
 
-<template data-title="Tag - Tag 9" data-id="tag-tag-9">
+<template>
 <li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_change_limit.png" alt="限度額変更"></li>
+<script type="text/plain" data-element-copy>
+<li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_change_limit.png" alt="限度額変更"></li>
+</script>
 </template>
 
-<template data-title="Tag - Tag 10" data-id="tag-tag-10">
+<template>
 <li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_periodic_transfer.png" alt="定期振替"></li>
+<script type="text/plain" data-element-copy>
+<li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_periodic_transfer.png" alt="定期振替"></li>
+</script>
 </template>
 
-<template data-title="Tag - Tag 11" data-id="tag-tag-11">
+<template>
 <li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_borrowing.png" alt="お借入れ"></li>
+<script type="text/plain" data-element-copy>
+<li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_borrowing.png" alt="お借入れ"></li>
+</script>
 </template>
 
-<template data-title="Tag - Tag 12" data-id="tag-tag-12">
+<template>
 <li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_repayment.png" alt="ご返済"></li>
+<script type="text/plain" data-element-copy>
+<li class="e-tag__item"><img src="https://www.lawsonbank.jp/common/images/img_tag_repayment.png" alt="ご返済"></li>
+</script>
 </template>

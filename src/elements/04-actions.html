@@ -1,6 +1,6 @@
 <!--
   category: アクション
-  usage: Add one template block per element. The template content is the copy target.
+  usage: Add one template block per element. Preview HTML goes in template, copy HTML goes in data-element-copy.
 -->
 
 <template>
@@ -23,85 +23,171 @@
             </section><!-- /.c-section--h2 -->
           </div><!-- /.c-unit__inner -->
         </div><!-- /.c-unit -->
+<script type="text/plain" data-element-copy>
+<div class="c-unit">
+          <div class="c-unit__inner">
+            <section class="c-section--h2">
+              <div class="c-section__inner">
+                <p class="e-txt--lead">
+                  リード文が入りますリード文が入りますリード文が入りますリード文が入ります
+                </p>
+              </div><!-- /.c-section__inner -->
+              <h2 class="e-h2--element" id="search--content"># 検索ボックス</h2>
+              
+              <div class="c-section__inner">
+                <div class="m-search--content">
+                  <input type="text" placeholder="サイト内検索" class="m-search--content__input">
+                  <a href="#" class="m-search--content__btn"><span class="m-search--content__btn-txt"><img src="https://www.lawsonbank.jp/common/images/img_icon_search_g_20.png" alt="検索" class="m-search--content__btn-icon"><span class="u-hidden-sp">検索</span></span></a>
+                </div><!-- /.m-search -->
+              </div><!-- /.c-section__inner -->
+            </section><!-- /.c-section--h2 -->
+          </div><!-- /.c-unit__inner -->
+        </div><!-- /.c-unit -->
+</script>
 </template>
 
-<template data-title="塗りボタン" data-id="塗りボタン">
+<template>
 <div class="m-btn-wrap">
                     <a href="#DUMMY" class="e-btn"><span class="e-btn__txt">ボタンテキスト(主)</span></a>
                   </div><!-- /.m-btn-wrap -->
+<script type="text/plain" data-element-copy>
+<div class="m-btn-wrap">
+                    <a href="#DUMMY" class="e-btn"><span class="e-btn__txt">ボタンテキスト(主)</span></a>
+                  </div><!-- /.m-btn-wrap -->
+</script>
 </template>
 
-<template data-title="枠線ボタン" data-id="枠線ボタン">
+<template>
 <div class="m-btn-wrap">
                     <a href="#DUMMY" class="e-btn--bdr"><span class="e-btn__txt">ボタンテキスト<br>（標準）</span></a>
                   </div><!-- /.m-btn-wrap -->
+<script type="text/plain" data-element-copy>
+<div class="m-btn-wrap">
+                    <a href="#DUMMY" class="e-btn--bdr"><span class="e-btn__txt">ボタンテキスト<br>（標準）</span></a>
+                  </div><!-- /.m-btn-wrap -->
+</script>
 </template>
 
-<template data-title="白ボタン" data-id="白ボタン">
+<template>
 <div class="m-btn-wrap--blue">
                     <a class="e-btn--white" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト(主)</span></a>
                   </div><!-- /.m-btn-wrap -->
+<script type="text/plain" data-element-copy>
+<div class="m-btn-wrap--blue">
+                    <a class="e-btn--white" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト(主)</span></a>
+                  </div><!-- /.m-btn-wrap -->
+</script>
 </template>
 
-<template data-title="塗りボタン 2" data-id="塗りボタン-2">
+<template>
 <div class="m-btn-wrap">
                     <a class="e-btn" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト</span></a>
                     <button class="e-btn"><span class="e-btn__txt">ボタンテキスト(button要素)</span></button>
                   </div><!-- /.m-btn-wrap -->
+<script type="text/plain" data-element-copy>
+<div class="m-btn-wrap">
+                    <a class="e-btn" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト</span></a>
+                    <button class="e-btn"><span class="e-btn__txt">ボタンテキスト(button要素)</span></button>
+                  </div><!-- /.m-btn-wrap -->
+</script>
 </template>
 
-<template data-title="塗りボタン 3" data-id="塗りボタン-3">
+<template>
 <div class="m-btn-wrap">
                     <a class="e-btn is-diabled" href="#DUMMY"><span class="e-btn__txt">disabled</span></a>
                     <button class="e-btn" disabled="disabled"><span class="e-btn__txt">disabled(button要素)</span></button>
                   </div><!-- /.m-btn-wrap -->
+<script type="text/plain" data-element-copy>
+<div class="m-btn-wrap">
+                    <a class="e-btn is-diabled" href="#DUMMY"><span class="e-btn__txt">disabled</span></a>
+                    <button class="e-btn" disabled="disabled"><span class="e-btn__txt">disabled(button要素)</span></button>
+                  </div><!-- /.m-btn-wrap -->
+</script>
 </template>
 
-<template data-title="枠線ボタン 2" data-id="枠線ボタン-2">
+<template>
 <div class="m-btn-wrap">
                     <a class="e-btn" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト</span></a>
                     <a class="e-btn--bdr" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト</span></a>
                   </div><!-- /.m-btn-wrap -->
+<script type="text/plain" data-element-copy>
+<div class="m-btn-wrap">
+                    <a class="e-btn" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト</span></a>
+                    <a class="e-btn--bdr" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト</span></a>
+                  </div><!-- /.m-btn-wrap -->
+</script>
 </template>
 
-<template data-title="白枠ボタン" data-id="白枠ボタン">
+<template>
 <div class="m-btn-wrap--blue">
                     <a class="e-btn--white" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト(主)</span></a>
                     <a class="e-btn--bdr-white" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト(標準)</span></a>
                   </div><!-- /.m-btn-wrap -->
+<script type="text/plain" data-element-copy>
+<div class="m-btn-wrap--blue">
+                    <a class="e-btn--white" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト(主)</span></a>
+                    <a class="e-btn--bdr-white" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト(標準)</span></a>
+                  </div><!-- /.m-btn-wrap -->
+</script>
 </template>
 
-<template data-title="枠線ボタン 3" data-id="枠線ボタン-3">
+<template>
 <div class="m-btn-wrap">
                     <a class="e-btn--small" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト(小)</span></a>
                     <a class="e-btn--bdr--small" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト(小)</span></a>
                     <a class="e-btn--bdr--small is-diabled" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト(小)</span></a>
                   </div><!-- /.m-btn-wrap -->
+<script type="text/plain" data-element-copy>
+<div class="m-btn-wrap">
+                    <a class="e-btn--small" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト(小)</span></a>
+                    <a class="e-btn--bdr--small" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト(小)</span></a>
+                    <a class="e-btn--bdr--small is-diabled" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト(小)</span></a>
+                  </div><!-- /.m-btn-wrap -->
+</script>
 </template>
 
-<template data-title="枠線ボタン（別タブ）" data-id="枠線ボタン-別タブ">
+<template>
 <div class="m-btn-wrap">
                     <a class="e-btn" href="#DUMMY" target="_blank"><span class="e-btn__txt">ボタン(外部サイト)<img src="https://www.lawsonbank.jp/common/images/img_icon_ex_w.png" alt="新規ウィンドウで開きます" class="e-btn__icon--ex"></span></a>
                     <a class="e-btn" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト<br>(アイコン付・主)</span></a>
                     <a href="#DUMMY" class="e-btn--bdr"><span class="e-btn__txt">ボタンテキスト<br>（アイコン付・標準）</span></a>
                   </div><!-- /.m-btn-wrap -->
+<script type="text/plain" data-element-copy>
+<div class="m-btn-wrap">
+                    <a class="e-btn" href="#DUMMY" target="_blank"><span class="e-btn__txt">ボタン(外部サイト)<img src="https://www.lawsonbank.jp/common/images/img_icon_ex_w.png" alt="新規ウィンドウで開きます" class="e-btn__icon--ex"></span></a>
+                    <a class="e-btn" href="#DUMMY"><span class="e-btn__txt">ボタンテキスト<br>(アイコン付・主)</span></a>
+                    <a href="#DUMMY" class="e-btn--bdr"><span class="e-btn__txt">ボタンテキスト<br>（アイコン付・標準）</span></a>
+                  </div><!-- /.m-btn-wrap -->
+</script>
 </template>
 
-<template data-title="Conversion - 当行普通預金口座をお持ちのお客さま スーパー定期預金のお申込み" data-id="conversion-当行普通預金口座をお持ちのお客さま-スーパー定期預金のお申込み">
+<template>
 <div class="m-conversion__col">
                       <p class="m-conversion__txt">当行普通預金口座をお持ちのお客さま</p>
                       <a href="#DUMMY" class="e-btn"><span class="e-btn__txt">スーパー定期預金のお申込み</span></a>
                     </div><!-- /.m-conversion__col -->
+<script type="text/plain" data-element-copy>
+<div class="m-conversion__col">
+                      <p class="m-conversion__txt">当行普通預金口座をお持ちのお客さま</p>
+                      <a href="#DUMMY" class="e-btn"><span class="e-btn__txt">スーパー定期預金のお申込み</span></a>
+                    </div><!-- /.m-conversion__col -->
+</script>
 </template>
 
-<template data-title="Conversion - 当行普通預金口座をお持ちでないお客さま 口座開設" data-id="conversion-当行普通預金口座をお持ちでないお客さま-口座開設">
+<template>
 <div class="m-conversion__col">
                       <p class="m-conversion__txt">当行普通預金口座をお持ちでないお客さま</p>
                       <a href="#DUMMY" class="e-btn"><span class="e-btn__txt">口座開設</span></a>
                     </div><!-- /.m-conversion__col -->
+<script type="text/plain" data-element-copy>
+<div class="m-conversion__col">
+                      <p class="m-conversion__txt">当行普通預金口座をお持ちでないお客さま</p>
+                      <a href="#DUMMY" class="e-btn"><span class="e-btn__txt">口座開設</span></a>
+                    </div><!-- /.m-conversion__col -->
+</script>
 </template>
 
-<template data-title="Conversion - iPhoneをご利用のお客さま" data-id="conversion-iphoneをご利用のお客さま">
+<template>
 <div class="m-conversion__col--download">
                       <p class="m-conversion__txt">iPhoneをご利用のお客さま</p>
                       <div class="m-conversion__col-inner">
@@ -113,9 +199,22 @@
                         </p>
                       </div><!-- /.m-conversion__col-inner -->
                     </div><!-- /.m-conversion__col -->
+<script type="text/plain" data-element-copy>
+<div class="m-conversion__col--download">
+                      <p class="m-conversion__txt">iPhoneをご利用のお客さま</p>
+                      <div class="m-conversion__col-inner">
+                        <p class="m-conversion__ttl">
+                          <a href="#DUMMY" class="e-link--logo"><img src="https://www.lawsonbank.jp/common/images/img_app_store_badge_pc.png" alt="App Storeからダウンロード" class="m-conversion__app--pc u-hidden-sp"><img src="https://www.lawsonbank.jp/common/images/img_app_store_badge_sp.png" alt="App Storeからダウンロード" class="m-conversion__app--sp u-hidden-pc"></a>
+                        </p>
+                        <p>
+                          <img src="https://www.lawsonbank.jp/common/images/img_QR_DUMMY.png" alt="QRコード" class="m-conversion__qr">
+                        </p>
+                      </div><!-- /.m-conversion__col-inner -->
+                    </div><!-- /.m-conversion__col -->
+</script>
 </template>
 
-<template data-title="Conversion - Androidをご利用のお客さま" data-id="conversion-androidをご利用のお客さま">
+<template>
 <div class="m-conversion__col--download">
                       <p class="m-conversion__txt">Androidをご利用のお客さま</p>
                       <div class="m-conversion__col-inner">
@@ -127,6 +226,19 @@
                         </p>
                       </div><!-- /.m-conversion__col-inner -->
                     </div><!-- /.m-conversion__col -->
+<script type="text/plain" data-element-copy>
+<div class="m-conversion__col--download">
+                      <p class="m-conversion__txt">Androidをご利用のお客さま</p>
+                      <div class="m-conversion__col-inner">
+                        <p class="m-conversion__ttl">
+                          <a href="#DUMMY" class="e-link--logo"><img src="https://www.lawsonbank.jp/common/images/img_google_play_badge_pc.png" alt="Google Playで手に入れよう" class="m-conversion__google--pc u-hidden-sp"><img src="https://www.lawsonbank.jp/common/images/img_google_play_badge_sp.png" alt="Google Playで手に入れよう" class="m-conversion__google--sp u-hidden-pc"></a>
+                        </p>
+                        <p>
+                          <img src="https://www.lawsonbank.jp/common/images/img_QR_DUMMY.png" alt="QRコード" class="m-conversion__qr">
+                        </p>
+                      </div><!-- /.m-conversion__col-inner -->
+                    </div><!-- /.m-conversion__col -->
+</script>
 </template>
 
 <template>
@@ -149,6 +261,27 @@
                     </div><!-- /.m-inquiry -->
                   </div><!-- /.c-section__inner -->
                 </section><!-- /.c-section--h3 -->
+<script type="text/plain" data-element-copy>
+<section class="c-section--h3">
+                  <h3 class="e-h2--element"># お問い合わせ</h3>
+                  <div class="c-section__inner">
+                    <div class="m-inquiry">
+                      <p class="m-inquiry__ttl">お問い合わせ先</p>
+                      <dl class="e-define-table">
+                        <dt class="e-define-table__ttl">部署名</dt>
+                        <dd class="e-define-table__txt">あいうえおかきくけこ10さしすせそたちつてと20</dd>
+                        <dt class="e-define-table__ttl">担当者</dt>
+                        <dd class="e-define-table__txt">あいうえおかきくけこ10</dd>
+                        <dt class="e-define-table__ttl">電話番号</dt>
+                        <dd class="e-define-table__txt"><span class="js-tel">00-0000-0000</span></dd>
+                      </dl>
+                      <ul class="m-list-link u-mb--00">
+                        <li><a href="#DUMMY" class="e-link--arrow">リンクテキストが入りますリンクテキストが入ります</a></li>
+                      </ul>
+                    </div><!-- /.m-inquiry -->
+                  </div><!-- /.c-section__inner -->
+                </section><!-- /.c-section--h3 -->
+</script>
 </template>
 
 <template>
@@ -166,6 +299,22 @@
                     </div><!-- /.m-inquiry -->
                   </div><!-- /.c-section__inner -->
                 </section><!-- /.c-section--h3 -->
+<script type="text/plain" data-element-copy>
+<section class="c-section--h3">
+                  <h3 class="e-h2--element"># お問い合わせ - TEL&#9312;</h3>
+                  <div class="c-section__inner">
+                    <div class="m-inquiry">
+                      <p class="m-inquiry__ttl">あいうえおかきくけこさしすせそ15</p>
+                      <p class="m-inquiry__tel">
+                        <img src="https://www.lawsonbank.jp/common/images/img_icon_freedial.png" alt="フリーダイヤル" class="m-inquiry__icon">
+                        <span class="js-tel">0120-000000</span>
+                        <span class="u-font--12">（通話料無料）</span>
+                      </p>
+                      <p class="m-inquiry__info">受付時間：平日9:00～17:00（祝日および銀行休業日を除く）</p>
+                    </div><!-- /.m-inquiry -->
+                  </div><!-- /.c-section__inner -->
+                </section><!-- /.c-section--h3 -->
+</script>
 </template>
 
 <template>
@@ -189,6 +338,28 @@
                     </div><!-- /.m-inquiry -->
                   </div><!-- /.c-section__inner -->
                 </section><!-- /.c-section--h3 -->
+<script type="text/plain" data-element-copy>
+<section class="c-section--h3">
+                  <h3 class="e-h2--element"># お問い合わせ - TEL&#9313;</h3>
+                  <div class="c-section__inner">
+                    <div class="m-inquiry">
+                      <p class="m-inquiry__ttl">あいうえおかきくけこさしすせそ15</p>
+                      <p class="m-inquiry__tel">
+                        <img src="https://www.lawsonbank.jp/common/images/img_icon_freedial.png" alt="フリーダイヤル" class="m-inquiry__icon">
+                        <span class="js-tel">0120-000000</span>
+                        <span class="u-font--12">（通話料無料）</span>
+                      </p>
+                      <p class="m-inquiry__tel--small">
+                        <span class="js-tel">0570-000000</span>
+                      </p>
+                      <p class="m-inquiry__info">
+                        あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30<br>
+                        受付時間：平日9:00～17:00（祝日および銀行休業日を除く）
+                      </p>
+                    </div><!-- /.m-inquiry -->
+                  </div><!-- /.c-section__inner -->
+                </section><!-- /.c-section--h3 -->
+</script>
 </template>
 
 <template>
@@ -224,6 +395,40 @@
                     </ul>
                   </div><!-- /.c-section__inner -->
                 </section><!-- /.c-section--h3 -->
+<script type="text/plain" data-element-copy>
+<section class="c-section--h3">
+                  <h3 class="e-h2--element"># TEL - 外部</h3>
+                  <div class="c-section__inner">
+                    <div class="m-inquiry">
+                      <p class="m-inquiry__ttl">お問い合わせ先</p>
+                      <p class="m-inquiry__tel">
+                        <img src="https://www.lawsonbank.jp/common/images/img_icon_freedial.png" alt="フリーダイヤル" class="m-inquiry__icon">
+                        <span class="js-tel">0120-000000</span>
+                        <span class="u-font--12">（通話料無料）</span>
+                      </p>
+                      <p class="m-inquiry__info--small">
+                        フリーコールがご利用できないお客さま
+                      </p>
+                      <p class="m-inquiry__tel--small">
+                        <span class="js-tel">0570-000000</span>
+                        <span class="u-font--12">（ナビダイヤル）</span>
+                      </p>
+                      <p class="m-inquiry__info">
+                        あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30<br>
+                        受付時間：平日9:00～17:00（祝日および銀行休業日を除く）
+                      </p>
+                    </div><!-- /.m-inquiry -->
+                    <p class="e-txt">
+                      あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30
+                    </p>
+                    <ul class="m-list-link u-mb--00">
+                      <li>
+                        <a href="#DUMMY" class="e-link--arrow" target="_blank">リンクテキストが入りますリンクテキストが入ります<img src="https://www.lawsonbank.jp/common/images/img_icon_ex.png" alt="新規ウィンドウで開きます" class="e-link__icon"></a>
+                      </li>
+                    </ul>
+                  </div><!-- /.c-section__inner -->
+                </section><!-- /.c-section--h3 -->
+</script>
 </template>
 
 <template>
@@ -262,4 +467,41 @@
                     </div><!-- /.m-inquiry -->
                   </div><!-- /.c-section__inner -->
                 </section><!-- /.c-section--h3 -->
+<script type="text/plain" data-element-copy>
+<section class="c-section--h3">
+                  <h3 class="e-h2--element"># TEL - バリエーション</h3>
+                  <div class="c-section__inner">
+                    <div class="m-inquiry">
+                      <p class="m-inquiry__tel">
+                        <img src="https://www.lawsonbank.jp/common/images/img_icon_freedial.png" alt="フリーダイヤル" class="m-inquiry__icon">
+                        <span class="js-tel">0570-000000</span>
+                        <span class="u-font--12">（通話料無料）</span>
+                      </p>
+                      <p class="m-inquiry__tel--small">
+                        <img src="https://www.lawsonbank.jp/common/images/img_icon_freedial.png" alt="フリーダイヤル" class="m-inquiry__icon">
+                        <span class="js-tel">0570-000000</span>
+                        <span class="u-font--12">（通話料無料）</span>
+                      </p>
+                      <p class="m-inquiry__tel">
+                        <img src="https://www.lawsonbank.jp/common/images/img_icon_navidial.png" alt="ナビダイヤル" class="m-inquiry__icon">
+                        <span class="js-tel">0570-000000</span>
+                        <span class="u-font--12">（ナビダイヤル）</span>
+                      </p>
+                      <p class="m-inquiry__tel--small">
+                        <img src="https://www.lawsonbank.jp/common/images/img_icon_navidial.png" alt="ナビダイヤル" class="m-inquiry__icon">
+                        <span class="js-tel">0570-000000</span>
+                        <span class="u-font--12">（ナビダイヤル）</span>
+                      </p>
+                      <p class="m-inquiry__tel">
+                        <span class="js-tel">050-000-0000</span>
+                        <span class="u-font--12">（通話料有料）</span>
+                      </p>
+                      <p class="m-inquiry__tel--small">
+                        <span class="js-tel">03-0000-0000</span>
+                        <span class="u-font--12">（通話料有料）</span>
+                      </p>
+                    </div><!-- /.m-inquiry -->
+                  </div><!-- /.c-section__inner -->
+                </section><!-- /.c-section--h3 -->
+</script>
 </template>

@@ -1,0 +1,22 @@
+---
+import ElementCategory from "../../components/ElementCategory.astro";
+import ElementSideNav from "../../components/ElementSideNav.astro";
+import ElementListLayout from "../../layouts/ElementListLayout.astro";
+import { elementCategories } from "../../data/elementCategories.js";
+
+export function getStaticPaths() {
+  return elementCategories.map((category) => ({
+    params: { categoryId: category.id },
+    props: { category }
+  }));
+}
+
+const { category } = Astro.props;
+---
+
+<ElementListLayout title={`エレメントリスト：${category.title}`}>
+  <ElementSideNav categories={elementCategories} currentCategoryId={category.id} />
+  <div class="element-list__content">
+    <ElementCategory title={category.title} elements={category.elements} indexPrefix={category.id} />
+  </div>
+</ElementListLayout>

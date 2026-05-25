@@ -1,0 +1,45 @@
+---
+const { categories, currentCategoryId = "" } = Astro.props;
+
+const categoryPath = (category) => `/categories/${category.id}.html`;
+const categoryHeadingPath = (category) => `${categoryPath(category)}#${category.id}-heading`;
+const elementPath = (category, targetId) => `${categoryPath(category)}#${targetId}`;
+---
+
+<aside class="element-sidenav" aria-label="エレメント一覧">
+  <nav class="element-sidenav__nav">
+    {categories.map((category) => {
+      const isCurrent = category.id === currentCategoryId;
+
+      return (
+        <details
+          class="element-sidenav__group"
+          data-element-nav-group
+          data-nav-current={isCurrent ? "true" : undefined}
+          open={isCurrent}
+        >
+          <summary class="element-sidenav__summary">
+            <span class="element-sidenav__category">{category.title}</span>
+            <span class="element-sidenav__count">{category.elements.length}</span>
+          </summary>
+          <ul class="element-sidenav__list">
+            <li class="element-sidenav__item element-sidenav__item--category">
+              <a href={categoryHeadingPath(category)} aria-current={isCurrent ? "page" : undefined}>
+                カテゴリ先頭へ
+              </a>
+            </li>
+            {category.elements.map((element, index) => {
+              const targetId = `element-card-${category.id}-${index}`;
+
+              return (
+                <li class="element-sidenav__item" data-element-nav-item data-nav-target={targetId}>
+                  <a href={isCurrent ? `#${targetId}` : elementPath(category, targetId)}>{element.title}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </details>
+      );
+    })}
+  </nav>
+</aside>
