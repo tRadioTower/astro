@@ -1,12 +1,39 @@
 ---
-const { categories, currentCategoryId = "" } = Astro.props;
+const { categories, currentCategoryId = "", showSearch = true } = Astro.props;
 
 const categoryPath = (category) => `/categories/${category.id}.html`;
 const categoryHeadingPath = (category) => `${categoryPath(category)}#${category.id}-heading`;
 const elementPath = (category, targetId) => `${categoryPath(category)}#${targetId}`;
+const totalElements = categories.reduce((total, category) => total + category.elements.length, 0);
+const elementSearchText = (category, element) => {
+  const previewText = String(element.html || "")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return [category.title, element.title, element.id, element.description, previewText, element.source]
+    .filter(Boolean)
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim();
+};
 ---
 
 <aside class="element-sidenav" aria-label="エレメント一覧">
+  {showSearch && (
+    <div class="element-sidenav__search">
+      <input
+        class="element-list__search"
+        type="search"
+        placeholder="タイトル・HTMLで検索"
+        aria-label="エレメントを検索"
+        data-element-search
+      />
+      <p class="element-sidenav__search-status" data-element-search-status data-total-count={totalElements}>
+        全{totalElements}件
+      </p>
+    </div>
+  )}
   <nav class="element-sidenav__nav">
     {categories.map((category) => {
       const isCurrent = category.id === currentCategoryId;
@@ -20,7 +47,13 @@ const elementPath = (category, targetId) => `${categoryPath(category)}#${targetI
         >
           <summary class="element-sidenav__summary">
             <span class="element-sidenav__category">{category.title}</span>
-            <span class="element-sidenav__count">{category.elements.length}</span>
+            <span
+              class="element-sidenav__count"
+              data-element-nav-count
+              data-total-count={category.elements.length}
+            >
+              {category.elements.length}
+            </span>
           </summary>
           <ul class="element-sidenav__list">
             <li class="element-sidenav__item element-sidenav__item--category">
@@ -32,7 +65,12 @@ const elementPath = (category, targetId) => `${categoryPath(category)}#${targetI
               const targetId = `element-card-${category.id}-${index}`;
 
               return (
-                <li class="element-sidenav__item" data-element-nav-item data-nav-target={targetId}>
+                <li
+                  class="element-sidenav__item"
+                  data-element-nav-item
+                  data-nav-target={targetId}
+                  data-nav-search={elementSearchText(category, element)}
+                >
                   <a href={isCurrent ? `#${targetId}` : elementPath(category, targetId)}>{element.title}</a>
                 </li>
               );

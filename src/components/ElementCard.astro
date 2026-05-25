@@ -14,17 +14,19 @@ const searchText = [element.title, element.id, element.description, categoryTitl
     <div class="element-card__meta">
       <h3 class="element-card__title">{element.title}</h3>
     </div>
-    <button class="element-card__copy" type="button" data-copy-source={sourceId}>
-      コピー
-    </button>
   </header>
 
   <div class="element-card__preview" set:html={element.html} />
 
-  <details class="element-card__source" open>
-    <summary>ソースコード</summary>
+  <section class="element-card__source" aria-labelledby={`${sourceId}-heading`}>
+    <div class="element-card__source-header">
+      <button class="element-card__copy" type="button" data-copy-source={sourceId}>
+        コピー
+      </button>
+      <h4 class="element-card__source-title" id={`${sourceId}-heading`}>ソースコード</h4>
+    </div>
     <pre><code>{sourceCode}</code></pre>
-  </details>
+  </section>
 
   <textarea id={sourceId} class="element-card__clipboard" readonly>{sourceCode}</textarea>
 </article>

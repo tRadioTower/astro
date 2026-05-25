@@ -4,7 +4,7 @@ import ElementSideNav from "../components/ElementSideNav.astro";
 import { elementCategories } from "../data/elementCategories.js";
 ---
 
-<ElementListLayout title="エレメントリスト" showSearch={false}>
+<ElementListLayout title="エレメントリスト">
   <ElementSideNav categories={elementCategories} />
   <div class="element-list__content">
     <section class="element-category-index" aria-labelledby="category-index-heading">

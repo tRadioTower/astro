@@ -23,17 +23,6 @@ const { title = "エレメントリスト", showSearch = true } = Astro.props;
       <header class="element-list__header">
         <div class="element-list__header-inner">
           <h1 class="element-list__title">{title}</h1>
-          {showSearch && (
-            <div class="element-list__tools">
-              <input
-                class="element-list__search"
-                type="search"
-                placeholder="タイトル・HTMLで検索"
-                aria-label="エレメントを検索"
-                data-element-search
-              />
-            </div>
-          )}
         </div>
       </header>
       {showSearch && <p class="element-list__empty" data-element-empty hidden>該当するエレメントはありません。</p>}
@@ -70,6 +59,7 @@ const { title = "エレメントリスト", showSearch = true } = Astro.props;
 
       const searchInput = document.querySelector("[data-element-search]");
       const emptyMessage = document.querySelector("[data-element-empty]");
+      const searchStatus = document.querySelector("[data-element-search-status]");
       const cards = Array.from(document.querySelectorAll("[data-element-card]"));
       const categories = Array.from(document.querySelectorAll("[data-element-category]"));
       const navItems = Array.from(document.querySelectorAll("[data-element-nav-item]"));
@@ -93,19 +83,35 @@ const { title = "エレメントリスト", showSearch = true } = Astro.props;
 
         navItems.forEach((item) => {
           const target = document.getElementById(item.dataset.navTarget || "");
-          item.hidden = target ? Boolean(target.hidden) : Boolean(query);
+          const navSearchText = (item.dataset.navSearch || "").toLowerCase();
+          const visible = query ? navSearchText.includes(query) : true;
+          item.hidden = target ? Boolean(target.hidden) : !visible;
         });
+
+        let navVisibleCount = 0;
 
         navGroups.forEach((group) => {
           const visibleItems = group.querySelectorAll("[data-element-nav-item]:not([hidden])");
+          const count = group.querySelector("[data-element-nav-count]");
           const hasVisibleItems = visibleItems.length > 0;
           const isCurrent = group.dataset.navCurrent === "true";
           group.hidden = !hasVisibleItems;
           group.open = Boolean((query && hasVisibleItems) || (!query && isCurrent));
+
+          if (count) {
+            count.textContent = query ? String(visibleItems.length) : count.dataset.totalCount || "0";
+          }
+
+          navVisibleCount += visibleItems.length;
         });
 
+        if (searchStatus) {
+          const totalCount = searchStatus.dataset.totalCount || "0";
+          searchStatus.textContent = query ? `検索結果 ${navVisibleCount}件` : `全${totalCount}件`;
+        }
+
         if (emptyMessage) {
-          emptyMessage.hidden = visibleCount > 0;
+          emptyMessage.hidden = navVisibleCount > 0 || visibleCount > 0;
         }
       });
     </script>

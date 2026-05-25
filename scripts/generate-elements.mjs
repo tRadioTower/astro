@@ -169,11 +169,13 @@ const extractedElements = [
 await mkdir(elementsDir, { recursive: true });
 
 const generatedCategories = [];
+const existingElementClassNames = new Set();
 
 for (const category of categoryDefinitions) {
   const elements = extractedElements
     .filter((element) => matchesCategory(element, category))
     .flatMap((element) => splitElement(element));
+  collectElementClassNames(elements, existingElementClassNames);
   await writeFile(path.join(elementsDir, category.file), renderCategoryFile(category, elements));
   generatedCategories.push(category);
 }
@@ -181,11 +183,12 @@ for (const category of categoryDefinitions) {
 const commonCss = await readFile(commonCssPath, "utf8");
 
 for (const category of createUtilityCategories(commonCss)) {
+  collectElementClassNames(category.elements, existingElementClassNames);
   await writeFile(path.join(elementsDir, category.file), renderCategoryFile(category, category.elements));
   generatedCategories.push(category);
 }
 
-for (const category of createCommonClassCategories(commonCss)) {
+for (const category of createCommonClassCategories(commonCss, existingElementClassNames)) {
   await writeFile(path.join(elementsDir, category.file), renderCategoryFile(category, category.elements));
   generatedCategories.push(category);
 }
@@ -219,7 +222,7 @@ function extractElements(startLine, endLine, layout) {
         title,
         id: cleanId(lines[index]) || slugify(title),
         layout,
-        html: lines.slice(block.start, block.end + 1).join("\n").trim()
+        html: normalizeHtmlIndent(lines.slice(block.start, block.end + 1).join("\n"))
       });
     }
   }
@@ -394,7 +397,7 @@ function splitByHeadings(element) {
     const end = headingIndexes[index + 1] ?? findClosingLine(lines);
     const html = sectionBlock
       ? sectionBlock
-      : cleanFragmentLines(lines.slice(start, end)).join("\n").trim();
+      : normalizeHtmlIndent(cleanFragmentLines(lines.slice(start, end)).join("\n"));
     const subtitle = cleanTitle(lines[start]);
     const title = `${element.title} - ${subtitle}`;
 
@@ -455,7 +458,7 @@ function splitNewsElement(element) {
       }
     }
 
-    const html = lines.slice(index, ddEnd + 1).join("\n").trim();
+    const html = normalizeHtmlIndent(lines.slice(index, ddEnd + 1).join("\n"));
     const title = linkTitle(html, "Newsリンク");
     parts.push({
       ...element,
@@ -499,7 +502,7 @@ function extractMatchingTagBlocks(lines, tag, contentPattern, startPattern = nul
       }
     }
 
-    const html = lines.slice(index, end + 1).join("\n").trim();
+    const html = normalizeHtmlIndent(lines.slice(index, end + 1).join("\n"));
     contentPattern.lastIndex = 0;
 
     if (contentPattern.test(html)) {
@@ -550,7 +553,7 @@ function findContainingSectionBlock(lines, headingIndex) {
 
   for (let index = headingIndex; index < lines.length; index += 1) {
     if (/<\/section><!-- \/.c-section--h3 -->/.test(lines[index])) {
-      return lines.slice(start, index + 1).join("\n").trim();
+      return normalizeHtmlIndent(lines.slice(start, index + 1).join("\n"));
     }
   }
 
@@ -660,8 +663,10 @@ function createUtilityCategories(css) {
   return categories.filter((category) => category.elements.length > 0);
 }
 
-function createCommonClassCategories(css) {
-  const cssClasses = extractCssClasses(css).filter((cssClass) => !cssClass.name.startsWith("u-"));
+function createCommonClassCategories(css, excludedClassNames = new Set()) {
+  const cssClasses = extractCssClasses(css).filter(
+    (cssClass) => !cssClass.name.startsWith("u-") && !excludedClassNames.has(cssClass.name)
+  );
   const categories = commonClassCategoryDefinitions.map((category) => ({
     ...category,
     elements: []
@@ -673,6 +678,28 @@ function createCommonClassCategories(css) {
   }
 
   return categories.filter((category) => category.elements.length > 0);
+}
+
+function collectElementClassNames(elements, output) {
+  for (const element of elements) {
+    for (const className of extractClassNames(`${element.html || ""}\n${element.copy || ""}`)) {
+      output.add(className);
+    }
+  }
+}
+
+function extractClassNames(source) {
+  const classNames = new Set();
+
+  for (const match of String(source).matchAll(/\bclass\s*=\s*(?:"([^"]+)"|'([^']+)')/g)) {
+    for (const className of (match[1] || match[2] || "").trim().split(/\s+/)) {
+      if (className) {
+        classNames.add(className);
+      }
+    }
+  }
+
+  return classNames;
 }
 
 function extractCssClasses(css) {
@@ -819,6 +846,61 @@ function indent(source) {
     .join("\n");
 }
 
+function normalizeHtmlIndent(source) {
+  const lines = String(source).replace(/\r\n/g, "\n").split("\n");
+
+  while (lines.length > 0 && !lines[0].trim()) {
+    lines.shift();
+  }
+
+  while (lines.length > 0 && !lines[lines.length - 1].trim()) {
+    lines.pop();
+  }
+
+  if (lines.length === 0) {
+    return "";
+  }
+
+  const indents = lines
+    .filter((line) => line.trim())
+    .map((line) => countLeadingSpaces(line));
+  const firstIndent = countLeadingSpaces(lines.find((line) => line.trim()) || "");
+  let baseIndent = Math.min(...indents);
+
+  if (firstIndent === 0 && baseIndent === 0) {
+    const followingIndents = lines
+      .slice(1)
+      .filter((line) => line.trim())
+      .map((line) => countLeadingSpaces(line));
+    const nestedIndents = followingIndents.filter((indent) => indent > 0);
+
+    if (nestedIndents.length > 0 && !followingIndents.includes(0)) {
+      baseIndent = Math.min(...nestedIndents);
+    }
+  }
+
+  return lines
+    .map((line) => {
+      if (!line.trim()) {
+        return "";
+      }
+
+      const drop = Math.min(baseIndent, countLeadingSpaces(line));
+      return normalizeEvenIndent(line.slice(drop).trimEnd());
+    })
+    .join("\n")
+    .trim();
+}
+
+function countLeadingSpaces(line) {
+  return line.match(/^ */)?.[0].length || 0;
+}
+
+function normalizeEvenIndent(line) {
+  const indent = countLeadingSpaces(line);
+  return indent % 2 === 0 ? line : line.slice(1);
+}
+
 function renderCategoryFile(category, elements) {
   const header = [
     `<!--`,
@@ -835,14 +917,14 @@ function renderTemplate(_category, element) {
   const copySource = element.copy || element.html;
 
   return `<template>
-${element.html}
+${normalizeHtmlIndent(element.html)}
 ${renderCopyBlock(copySource)}
 </template>`;
 }
 
 function renderCopyBlock(source) {
   return `<script type="text/plain" data-element-copy>
-${String(source).trim()}
+${normalizeHtmlIndent(source)}
 </script>`;
 }
 
