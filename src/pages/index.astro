@@ -1,11 +1,43 @@
 ---
 import ElementListLayout from "../layouts/ElementListLayout.astro";
-import OneColumnElements from "../components/categories/OneColumnElements.astro";
-import TwoColumnElements from "../components/categories/TwoColumnElements.astro";
+import ElementCategory from "../components/ElementCategory.astro";
+import { elementCategories } from "../data/elementCategories.js";
 import "../styles/element-list.css";
 ---
 
 <ElementListLayout title="エレメントリスト">
-  <OneColumnElements />
-  <TwoColumnElements />
+  <aside class="element-sidenav" aria-label="エレメント一覧">
+    <nav class="element-sidenav__nav">
+      {elementCategories.map((category) => (
+        <details class="element-sidenav__group" data-element-nav-group>
+          <summary class="element-sidenav__summary">
+            <span class="element-sidenav__category">{category.title}</span>
+            <span class="element-sidenav__count">{category.elements.length}</span>
+          </summary>
+          <ul class="element-sidenav__list">
+            <li class="element-sidenav__item element-sidenav__item--category">
+              <a href={`#${category.id}-heading`}>カテゴリ先頭へ</a>
+            </li>
+            {category.elements.map((element, index) => {
+              const targetId = `element-card-${category.id}-${index}`;
+              return (
+                <li class="element-sidenav__item" data-element-nav-item data-nav-target={targetId}>
+                  <a href={`#${targetId}`}>{element.title}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </details>
+      ))}
+    </nav>
+  </aside>
+  <div class="element-list__content">
+    {elementCategories.map((category) => (
+      <ElementCategory
+        title={category.title}
+        elements={category.elements}
+        indexPrefix={category.id}
+      />
+    ))}
+  </div>
 </ElementListLayout>

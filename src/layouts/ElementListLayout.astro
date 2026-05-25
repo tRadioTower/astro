@@ -19,9 +19,23 @@ const { title = "エレメントリスト" } = Astro.props;
   <body>
     <main class="element-list">
       <header class="element-list__header">
-        <h1 class="element-list__title">{title}</h1>
+        <div class="element-list__header-inner">
+          <h1 class="element-list__title">{title}</h1>
+          <div class="element-list__tools">
+            <input
+              class="element-list__search"
+              type="search"
+              placeholder="タイトル・HTMLで検索"
+              aria-label="エレメントを検索"
+              data-element-search
+            />
+          </div>
+        </div>
       </header>
-      <slot />
+      <p class="element-list__empty" data-element-empty hidden>該当するエレメントはありません。</p>
+      <div class="element-list__body">
+        <slot />
+      </div>
     </main>
 
     <script is:inline>
@@ -47,6 +61,46 @@ const { title = "エレメントリスト" } = Astro.props;
           window.setTimeout(() => {
             button.textContent = "コピー";
           }, 1400);
+        }
+      });
+
+      const searchInput = document.querySelector("[data-element-search]");
+      const emptyMessage = document.querySelector("[data-element-empty]");
+      const cards = Array.from(document.querySelectorAll("[data-element-card]"));
+      const categories = Array.from(document.querySelectorAll("[data-element-category]"));
+      const navItems = Array.from(document.querySelectorAll("[data-element-nav-item]"));
+      const navGroups = Array.from(document.querySelectorAll("[data-element-nav-group]"));
+
+      searchInput?.addEventListener("input", () => {
+        const query = searchInput.value.trim().toLowerCase();
+        let visibleCount = 0;
+
+        cards.forEach((card) => {
+          const searchText = (card.dataset.search || "").toLowerCase();
+          const visible = !query || searchText.includes(query);
+          card.hidden = !visible;
+          if (visible) visibleCount += 1;
+        });
+
+        categories.forEach((category) => {
+          const visibleCards = category.querySelectorAll("[data-element-card]:not([hidden])");
+          category.hidden = visibleCards.length === 0;
+        });
+
+        navItems.forEach((item) => {
+          const target = document.getElementById(item.dataset.navTarget || "");
+          item.hidden = Boolean(target?.hidden);
+        });
+
+        navGroups.forEach((group) => {
+          const visibleItems = group.querySelectorAll("[data-element-nav-item]:not([hidden])");
+          const hasVisibleItems = visibleItems.length > 0;
+          group.hidden = !hasVisibleItems;
+          group.open = Boolean(query && hasVisibleItems);
+        });
+
+        if (emptyMessage) {
+          emptyMessage.hidden = visibleCount > 0;
         }
       });
     </script>

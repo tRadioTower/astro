@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../dist");
 const host = process.env.HOST || "127.0.0.1";
-const port = Number(process.env.PORT || 4321);
+let port = Number(process.env.PORT || 4322);
 
 const types = new Map([
   [".css", "text/css; charset=utf-8"],
@@ -24,7 +24,7 @@ const types = new Map([
   [".woff2", "font/woff2"]
 ]);
 
-createServer(async (request, response) => {
+const server = createServer(async (request, response) => {
   const url = new URL(request.url || "/", `http://${host}:${port}`);
   const decodedPath = decodeURIComponent(url.pathname);
   const requested = decodedPath === "/" ? "/index.html" : decodedPath;
@@ -48,7 +48,19 @@ createServer(async (request, response) => {
     "content-length": fileStat.size
   });
   createReadStream(filePath).pipe(response);
-}).listen(port, host, () => {
+});
+
+server.on("error", (error) => {
+  if (error.code === "EADDRINUSE") {
+    port += 1;
+    server.listen(port, host);
+    return;
+  }
+
+  throw error;
+});
+
+server.listen(port, host, () => {
   console.log(`Serving ${root}`);
   console.log(`Local: http://${host}:${port}/`);
 });

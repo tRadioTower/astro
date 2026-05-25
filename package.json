@@ -4,10 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "start": "npm run dev",
     "generate": "node scripts/generate-elements.mjs",
-    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev --host 127.0.0.1 --port 4321",
     "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
-    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview --host 127.0.0.1 --port 4322",
+    "serve": "npm run dev",
     "serve:dist": "node scripts/serve-dist.mjs"
   },
   "dependencies": {

@@ -1,12 +1,19 @@
 ---
-const { element, index } = Astro.props;
+const { element, index, categoryTitle = "" } = Astro.props;
 const cardId = `element-card-${index}`;
 const sourceId = `element-source-${index}`;
+const sourceCode = element.source || element.html;
+const sourceText = `${element.html} ${sourceCode}`.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+const searchText = [element.title, element.id, element.description, categoryTitle, sourceText, sourceCode]
+  .filter(Boolean)
+  .join(" ");
 ---
 
-<article class="element-card" id={cardId}>
+<article class="element-card" id={cardId} data-element-card data-search={searchText}>
   <header class="element-card__header">
-    <h3 class="element-card__title">{element.title}</h3>
+    <div class="element-card__meta">
+      <h3 class="element-card__title">{element.title}</h3>
+    </div>
     <button class="element-card__copy" type="button" data-copy-source={sourceId}>
       コピー
     </button>
@@ -16,8 +23,8 @@ const sourceId = `element-source-${index}`;
 
   <details class="element-card__source" open>
     <summary>ソースコード</summary>
-    <pre><code>{element.html}</code></pre>
+    <pre><code>{sourceCode}</code></pre>
   </details>
 
-  <textarea id={sourceId} class="element-card__clipboard" readonly>{element.html}</textarea>
+  <textarea id={sourceId} class="element-card__clipboard" readonly>{sourceCode}</textarea>
 </article>

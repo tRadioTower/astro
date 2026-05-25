@@ -1,53 +1,90 @@
 # Astro Element List
 
-`downloaded_site/elementlist.html` を元に、Astroでカテゴリ別のエレメントリストを生成します。
+HTMLエレメントをAstroで確認・共有するための制作環境です。
 
-## 構成
+## 必要なもの
 
-- `src/components/categories/OneColumnElements.astro`: 1カラム用エレメント
-- `src/components/categories/TwoColumnElements.astro`: 2カラム用エレメント
-- `src/components/ElementCard.astro`: エレメント本体、ソースコード、コピー機能
-- `src/elements/one-column/*.html`: 1カラム用エレメントのHTML断片
-- `src/elements/two-column/*.html`: 2カラム用エレメントのHTML断片
-- `src/data/*.js`: HTML断片を読み込むデータ定義
-- `scripts/generate-elements.mjs`: 元HTMLからデータを再生成するスクリプト
+Node.jsとnpmを事前にインストールしてください。
 
-## エレメントの追加
-
-1カラム用に追加する場合は `src/elements/one-column/` に `.html` ファイルを追加します。
-
-```html
-<div class="c-unit">
-  <div class="c-unit__inner">
-    <section class="c-section--h2">
-      <h2 class="e-h2--element" id="sample-element"># サンプルエレメント</h2>
-      <div class="c-section__inner">
-        ここにHTMLをそのまま貼り付けます。
-      </div>
-    </section>
-  </div>
-</div>
-```
-
-2カラム用に追加する場合は `src/elements/two-column/` に `.html` ファイルを追加します。
-
-ファイル名の昇順で表示されます。順番を固定したい場合は `029-sample-element.html` のように番号を付けてください。画面上のタイトルは `.e-h2--element` のテキストから自動で取得されます。
-
-## 使い方
-
-このリポジトリには、npmが入っていないMacでも動かせるようにローカルNode.jsを `.tools/node` に配置しています。
+## セットアップ
 
 ```bash
-./npmw install
-./npmw run build
+npm install
+```
+
+## ローカルで編集・確認
+
+```bash
+npm run dev
+```
+
+表示URL:
+
+```text
+http://127.0.0.1:4321/
+```
+
+`npm start` と `npm run serve` も同じ開発サーバーを起動します。起動したまま `src/elements/*.html`、CSS、Astroコンポーネントを編集すると、自動的に再ビルドされブラウザへ反映されます。
+
+## エレメントの管理方法
+
+エレメントはカテゴリごとのHTMLファイルにまとめています。
+
+```text
+src/elements/
+  01-foundation.html
+  02-layout.html
+  03-navigation.html
+  04-actions.html
+  05-content.html
+  06-data-table.html
+  07-media.html
+  08-notice.html
+  09-utilities-spacing.html
+  10-utilities-width.html
+  11-utilities-type.html
+  12-utilities-layout.html
+  13-utilities-other.html
+  99-sandbox.html
+```
+
+各ファイルの中に `<template>` を追加すると、一覧画面に1エレメントとして表示されます。
+
+```html
+<template>
+  <div class="c-unit">
+    <div class="c-unit__inner">
+      <section class="c-section--h2">
+        <h2 class="e-h2--element" id="primary-button"># Primary Button</h2>
+        <div class="c-section__inner">
+          <a href="#DUMMY" class="e-btn"><span class="e-btn__txt">ボタン</span></a>
+        </div>
+      </section>
+    </div>
+  </div>
+</template>
+```
+
+- `<template>` の中身: プレビュー表示、ソースコード表示、コピーボタンのコピー対象
+- タイトル: 中の `.e-h2--element` または `.e-h1--element` から自動取得
+- ID: 見出しの `id` から自動取得。なければタイトルから自動生成
+
+詳しい更新手順は [docs/element-management.md](docs/element-management.md) を参照してください。
+
+## ビルド
+
+共有用の静的HTMLを書き出す場合:
+
+```bash
+npm run build
 ```
 
 ビルド後は `dist/index.html` が出力されます。
 
-ローカルサーバーで `dist` を表示:
+ビルド済みの `dist` をローカルサーバーで確認:
 
 ```bash
-./serve-dist.sh
+npm run serve:dist
 ```
 
 表示URL:
@@ -56,20 +93,30 @@
 http://127.0.0.1:4322/
 ```
 
-開発サーバー:
+`4322` が埋まっている場合は、自動で次の空きポートにずれます。
+
+Astro標準のプレビューを使う場合:
 
 ```bash
-./npmw run dev
+npm run preview
 ```
 
-元HTMLを更新した場合:
+## 元HTMLから再生成
+
+`downloaded_site/elementlist.html` からカテゴリファイルを再生成する場合:
 
 ```bash
-./npmw run generate
+npm run generate
 ```
 
-このコマンドは `downloaded_site/elementlist.html` から `src/elements/.../*.html` を再生成します。手で追加したHTMLと同名のファイルがある場合は上書きされるため、追加分は新しい番号のファイル名にしてください。
+`src/elements/01-*.html` から `08-*.html` は上書きされます。手作業で追加した検証用エレメントは `src/elements/99-sandbox.html` か、新しいカテゴリファイルに分けておくと安全です。
 
-## メモ
+再生成時は、まとまっているエレメントをコピーしやすい小さなパーツへ自動分解します。たとえばリンクは同タブリンク、別タブリンク、PDFリンク、ZIPリンク、ページ内リンクなどに分かれます。
 
-既存HTML内のパスは書き換えていません。`/common/css/common.css` などのルート相対パスを有効にする場合は、該当アセットを `public/common/...` のように配置してください。
+また、`downloaded_site/common/css/common.css` から `.u-` で始まるユーティリティクラスを抽出し、余白・幅・文字色・レイアウト・その他のカテゴリへ追加します。ユーティリティのコピーボタンは `class="u-..."` をコピーします。
+
+## CSSと画像
+
+既存HTML内のパスは書き換えていません。`/common/css/common.css` は `public/common/css/common.css` に配置しています。
+
+`downloaded_site/` はGit管理対象外です。

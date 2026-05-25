@@ -1,8 +1,164 @@
-<div class="c-unit">
-            <div class="c-unit__inner">
-              <section class="c-section--h2">
-                <h2 class="e-h2--element" id="step-arrow"># ステップ（矢印）</h2>
-                <section class="c-section--h3">
+<!--
+  category: 注意・ステップ
+  usage: Add one template block per element. The template content is the copy target.
+-->
+
+<template data-title="Step - STEP 1 あいうえお STEP 2 あいうえお STEP 3 あいうえお" data-id="step-step-1-あいうえお-step-2-あいうえお-step-3-あいうえお">
+<ol class="m-step">
+                    <li class="m-step__item">
+                      <p class="m-step__circle--current">
+                        <span class="m-step__ttl">STEP</span>
+                        <span class="m-step__num">1</span>
+                      </p>
+                      <p class="m-step__txt">あいうえお</p>
+                    </li>
+                    <li class="m-step__item">
+                      <p class="m-step__circle">
+                        <span class="m-step__ttl">STEP</span>
+                        <span class="m-step__num">2</span>
+                      </p>
+                      <p class="m-step__txt">あいうえお</p>
+                    </li>
+                    <li class="m-step__item">
+                      <p class="m-step__circle">
+                        <span class="m-step__ttl">STEP</span>
+                        <span class="m-step__num">3</span>
+                      </p>
+                      <p class="m-step__txt">あいうえお</p>
+                    </li>
+                  </ol>
+</template>
+
+<template data-title="Step - あいうえお STEP 2 あいうえお STEP 3 あいうえお" data-id="step-あいうえお-step-2-あいうえお-step-3-あいうえお">
+<ol class="m-step">
+                    <li class="m-step__item">
+                      <p class="m-step__circle--past">
+                        <img class="m-step__icon" src="https://www.lawsonbank.jp/common/images/img_icon_check.png" alt="済">
+                      </p>
+                      <p class="m-step__txt">あいうえお</p>
+                    </li>
+                    <li class="m-step__item">
+                      <p class="m-step__circle--current">
+                        <span class="m-step__ttl">STEP</span>
+                        <span class="m-step__num">2</span>
+                      </p>
+                      <p class="m-step__txt">あいうえお</p>
+                    </li>
+                    <li class="m-step__item">
+                      <p class="m-step__circle">
+                        <span class="m-step__ttl">STEP</span>
+                        <span class="m-step__num">3</span>
+                      </p>
+                      <p class="m-step__txt">あいうえお</p>
+                    </li>
+                  </ol>
+</template>
+
+<template data-title="Step - あいうえお あいうえお STEP 3 あいうえお" data-id="step-あいうえお-あいうえお-step-3-あいうえお">
+<ol class="m-step">
+                    <li class="m-step__item">
+                      <p class="m-step__circle--past">
+                        <img class="m-step__icon" src="https://www.lawsonbank.jp/common/images/img_icon_check.png" alt="済">
+                      </p>
+                      <p class="m-step__txt">あいうえお</p>
+                    </li>
+                    <li class="m-step__item">
+                      <p class="m-step__circle--past">
+                        <img class="m-step__icon" src="https://www.lawsonbank.jp/common/images/img_icon_check.png" alt="済">
+                      </p>
+                      <p class="m-step__txt">あいうえお</p>
+                    </li>
+                    <li class="m-step__item">
+                      <p class="m-step__circle--current">
+                        <span class="m-step__ttl">STEP</span>
+                        <span class="m-step__num">3</span>
+                      </p>
+                      <p class="m-step__txt">あいうえお</p>
+                    </li>
+                  </ol>
+</template>
+
+<template>
+<section class="c-section--h3">
+                  <h3 class="e-h3">枠線あり</h3>
+                  <div class="c-section__inner">
+                    <div class="m-alert">
+                      <p class="m-alert__ttl"><strong><img class="m-alert__icon" src="https://www.lawsonbank.jp/common/images/img_icon_alert.png" alt="ご注意ください">注意事項</strong></p>
+                      <p class="e-txt">
+                        あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふ
+                      </p>
+                      <p class="e-txt">
+                        <a href="#DUMMY" class="e-link--arrow">リンクテキストが入りますリンクテキストが入りますリンクテキストが入ります</a>
+                      </p>
+                      <ul class="e-list--notes u-mb--00">
+                        <li>
+                          あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30
+                        </li>
+                      </ul>
+                    </div><!-- /.m-alert -->
+                  </div><!-- /.c-section__inner -->
+                </section><!-- /.c-section--h3 -->
+</template>
+
+<template>
+<section class="c-section--h3">
+                  <h3 class="e-h3">枠線なし&#9312;</h3>
+                  <div class="c-section__inner">
+                    <div class="m-alert--noborder">
+                      <p class="m-alert--noborder__ttl"><strong><img class="m-alert--noborder__icon" src="https://www.lawsonbank.jp/common/images/img_icon_alert.png" alt="ご注意ください">あいうえおにご注意ください</strong></p>
+                      <ul class="e-list">
+                        <li>
+                          あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30
+                        </li>
+                        <li>
+                          あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30
+                        </li>
+                      </ul>
+                    </div><!-- /.m-alert--noborder -->
+                  </div><!-- /.c-section__inner -->
+                </section><!-- /.c-section--h3 -->
+</template>
+
+<template>
+<section class="c-section--h3">
+                  <h3 class="e-h3">枠線なし&#9313;</h3>
+                  <div class="c-section__inner">
+                    <div class="m-alert--noborder">
+                      <p class="m-alert--noborder__ttl"><strong><img class="m-alert--noborder__icon" src="https://www.lawsonbank.jp/common/images/img_icon_alert_b.png" alt="ご注意ください">あいうえおにご注意ください</strong></p>
+                      <ul class="e-list">
+                        <li>
+                          あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30
+                        </li>
+                        <li>
+                          あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30
+                        </li>
+                      </ul>
+                    </div><!-- /.m-alert--noborder -->
+                  </div><!-- /.c-section__inner -->
+                </section><!-- /.c-section--h3 -->
+</template>
+
+<template>
+<section class="c-section--h3">
+                  <h3 class="e-h3">枠線なし&#9314;</h3>
+                  <div class="c-section__inner">
+                    <div class="m-alert--noborder">
+                      <p class="m-alert--noborder__ttl"><strong><img class="m-alert--noborder__icon" src="https://www.lawsonbank.jp/common/images/img_icon_info.png" alt="ご確認ください">あいうえおを確認ください</strong></p>
+                      <ul class="e-list">
+                        <li>
+                          あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30
+                        </li>
+                        <li>
+                          あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30あいうえおかきくけこ10さしすせそたちつてと20なにぬねのはひふへほ30
+                        </li>
+                      </ul>
+                    </div><!-- /.m-alert--noborder -->
+                  </div><!-- /.c-section__inner -->
+                </section><!-- /.c-section--h3 -->
+</template>
+
+<template>
+<section class="c-section--h3">
                   <h3 class="e-h3">エレメント単体</h3>
                   <div class="c-section__inner">
                     <div class="e-step-arrow">
@@ -10,7 +166,10 @@
                     </div><!-- /.e-step-arrow -->
                   </div><!-- /.c-section__inner -->
                 </section><!-- /.c-section--h3 -->
-                <section class="c-section--h3">
+</template>
+
+<template>
+<section class="c-section--h3">
                   <h3 class="e-h3">画像との組み合わせ&#9312;</h3>
                   <div class="c-section__inner">
                     <div class="c-grid c-grid--2col c-grid--int40 c-grid--pc_only">
@@ -32,7 +191,10 @@
                     </div><!-- /.c-grid -->
                   </div><!-- /.c-section__inner -->
                 </section><!-- /.c-section--h3 -->
-                <section class="c-section--h3">
+</template>
+
+<template>
+<section class="c-section--h3">
                   <h3 class="e-h3">画像との組み合わせ&#9313;</h3>
                   <div class="c-section__inner">
                     <div class="m-step-tmb">
@@ -52,7 +214,10 @@
                     </div><!-- /.m-step-tmb -->
                   </div><!-- /.c-section__inner -->
                 </section><!-- /.c-section--h3 -->
-                <section class="c-section--h3">
+</template>
+
+<template>
+<section class="c-section--h3">
                   <h3 class="e-h3">テキストとの組み合わせ</h3>
                   <div class="c-section__inner">
                     <ol>
@@ -146,6 +311,4 @@
                     </ol>
                   </div><!-- /.c-section__inner -->
                 </section><!-- /.c-section--h3 -->
-              </section><!-- /.c-section--h2 -->
-            </div><!-- /.c-unit__inner -->
-          </div><!-- /.c-unit -->
+</template>
