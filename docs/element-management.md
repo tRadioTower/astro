@@ -24,6 +24,8 @@ Astroは `src/elements/*.html` を読み込み、各ファイル内の `<templat
 
 ## 通常の更新手順
 
+以下の `npm` コマンドはWindowsとmacOSのどちらでも同じように使えます。
+
 1. 開発サーバーを起動します。
 
 ```bash
@@ -56,6 +58,12 @@ http://127.0.0.1:4321/
 ```
 
 5. 保存すると、開発サーバーが自動的に再ビルドし、ブラウザへ反映します。
+
+標準ポートを変えたい場合は、次のように指定します。
+
+```bash
+npm run dev -- --port 4330
+```
 
 ## templateの書き方
 
@@ -190,6 +198,12 @@ npm run serve:dist
 
 ```text
 http://127.0.0.1:4322/
+```
+
+ポートを明示する場合は、Windows/macOS共通で次のように指定できます。
+
+```bash
+npm run serve:dist -- --port 4330
 ```
 
 ## 元HTMLから再生成する場合

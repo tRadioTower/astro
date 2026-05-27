@@ -5,8 +5,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../dist");
-const host = process.env.HOST || "127.0.0.1";
-let port = Number(process.env.PORT || 4322);
+const options = parseArgs(process.argv.slice(2));
+const host = options.host || process.env.HOST || "127.0.0.1";
+let port = Number(options.port || process.env.PORT || 4322);
 
 const types = new Map([
   [".css", "text/css; charset=utf-8"],
@@ -64,3 +65,34 @@ server.listen(port, host, () => {
   console.log(`Serving ${root}`);
   console.log(`Local: http://${host}:${port}/`);
 });
+
+function parseArgs(args) {
+  const options = {};
+
+  for (let index = 0; index < args.length; index += 1) {
+    const arg = args[index];
+
+    if (arg === "--host") {
+      options.host = args[index + 1];
+      index += 1;
+      continue;
+    }
+
+    if (arg === "--port") {
+      options.port = args[index + 1];
+      index += 1;
+      continue;
+    }
+
+    if (arg.startsWith("--host=")) {
+      options.host = arg.slice("--host=".length);
+      continue;
+    }
+
+    if (arg.startsWith("--port=")) {
+      options.port = arg.slice("--port=".length);
+    }
+  }
+
+  return options;
+}
