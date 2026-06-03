@@ -1,9 +1,12 @@
 import { spawn } from "node:child_process";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 const args = process.argv.slice(2);
-const command = process.platform === "win32" ? "astro.cmd" : "astro";
+const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const astroBin = path.join(projectRoot, "node_modules", "astro", "astro.js");
 
-const child = spawn(command, args, {
+const child = spawn(process.execPath, [astroBin, ...args], {
   env: {
     ...process.env,
     ASTRO_TELEMETRY_DISABLED: "1"
